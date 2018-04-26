@@ -2,7 +2,7 @@
 //  MineViewController.swift
 //  BookTrading
 //
-//  Created by apple on 2018/4/25.
+//  Created by apple on 2018/4/27.
 //  Copyright © 2018年 Liberate. All rights reserved.
 //
 
@@ -14,6 +14,10 @@ class MineViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent;
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
+        let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
+        self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]
     }
 
     override func didReceiveMemoryWarning() {
