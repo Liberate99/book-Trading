@@ -14,6 +14,11 @@
 		187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A22E420833BAC00091047 /* LaunchScreen.storyboard */; };
 		187A22F120833BAD00091047 /* BookTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22F020833BAD00091047 /* BookTradingTests.swift */; };
 		187A22FC20833BAD00091047 /* BookTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22FB20833BAD00091047 /* BookTradingUITests.swift */; };
+		188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0BE20908368007F521C /* TabBarViewController.swift */; };
+		188FF0C5209086E6007F521C /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C4209086E6007F521C /* MarketViewController.swift */; };
+		188FF0C720908710007F521C /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C620908710007F521C /* StoreViewController.swift */; };
+		188FF0C92090873A007F521C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C82090873A007F521C /* RecommendViewController.swift */; };
+		188FF0CB20908755007F521C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0CA20908755007F521C /* MineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		187A22F720833BAD00091047 /* BookTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187A22FB20833BAD00091047 /* BookTradingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTradingUITests.swift; sourceTree = "<group>"; };
 		187A22FD20833BAD00091047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		188FF0BE20908368007F521C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		188FF0C4209086E6007F521C /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		188FF0C620908710007F521C /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		188FF0C82090873A007F521C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		188FF0CA20908755007F521C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,15 @@
 		187A22DA20833BAB00091047 /* BookTrading */ = {
 			isa = PBXGroup;
 			children = (
+				187A22E720833BAC00091047 /* Info.plist */,
 				187A22DB20833BAB00091047 /* AppDelegate.swift */,
 				187A22DD20833BAB00091047 /* ViewController.swift */,
-				187A22DF20833BAB00091047 /* Main.storyboard */,
-				187A22E220833BAC00091047 /* Assets.xcassets */,
-				187A22E420833BAC00091047 /* LaunchScreen.storyboard */,
-				187A22E720833BAC00091047 /* Info.plist */,
+				188FF0CD20908787007F521C /* info */,
+				188FF0C3209086B0007F521C /* mine */,
+				188FF0C220908676007F521C /* recommend */,
+				188FF0C120908664007F521C /* store */,
+				188FF0C020908657007F521C /* market */,
+				188FF0CC20908769007F521C /* TabBar */,
 			);
 			path = BookTrading;
 			sourceTree = "<group>";
@@ -123,6 +136,56 @@
 				187A22FD20833BAD00091047 /* Info.plist */,
 			);
 			path = BookTradingUITests;
+			sourceTree = "<group>";
+		};
+		188FF0C020908657007F521C /* market */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0C4209086E6007F521C /* MarketViewController.swift */,
+			);
+			path = market;
+			sourceTree = "<group>";
+		};
+		188FF0C120908664007F521C /* store */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0C620908710007F521C /* StoreViewController.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		188FF0C220908676007F521C /* recommend */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0C82090873A007F521C /* RecommendViewController.swift */,
+			);
+			path = recommend;
+			sourceTree = "<group>";
+		};
+		188FF0C3209086B0007F521C /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0CA20908755007F521C /* MineViewController.swift */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		188FF0CC20908769007F521C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0BE20908368007F521C /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		188FF0CD20908787007F521C /* info */ = {
+			isa = PBXGroup;
+			children = (
+				187A22DF20833BAB00091047 /* Main.storyboard */,
+				187A22E220833BAC00091047 /* Assets.xcassets */,
+				187A22E420833BAC00091047 /* LaunchScreen.storyboard */,
+			);
+			path = info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FF0C720908710007F521C /* StoreViewController.swift in Sources */,
+				188FF0C5209086E6007F521C /* MarketViewController.swift in Sources */,
 				187A22DE20833BAB00091047 /* ViewController.swift in Sources */,
+				188FF0CB20908755007F521C /* MineViewController.swift in Sources */,
+				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
+				188FF0C92090873A007F521C /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
