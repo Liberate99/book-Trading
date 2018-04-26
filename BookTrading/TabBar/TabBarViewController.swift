@@ -28,6 +28,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.CreatTabBar()
+        self.tabBar.unselectedItemTintColor = UIColor.gray
+        
         // Do any additional setup after loading the view.
     }
 
@@ -57,28 +59,33 @@ class TabBarViewController: UITabBarController {
         let MarketNav = UINavigationController(rootViewController:MarketVC)
         MarketNav.tabBarItem.title = "书市"
         MarketNav.tabBarItem.image = UIImage(named:"书市黑")
-        MarketNav.tabBarItem.selectedImage = UIImage(named:"书市白")
+        MarketNav.tabBarItem.selectedImage = UIImage(named:"书市白")?.withRenderingMode(.alwaysOriginal)
+        MarketNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
+
         
         let  StoreVC  = StoreViewController()
         StoreVC.title = "书库"
         let StroeNav = UINavigationController(rootViewController:StoreVC)
         StroeNav.tabBarItem.title = "书库"
         StroeNav.tabBarItem.image = UIImage(named:"书库黑")
-        StroeNav.tabBarItem.selectedImage = UIImage(named:"书库白")
+        StroeNav.tabBarItem.selectedImage = UIImage(named:"书库白")?.withRenderingMode(.alwaysOriginal)
+        StroeNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         let  RecomVC  = RecommendViewController()
         RecomVC.title = "推荐"
         let RecomNav = UINavigationController(rootViewController:RecomVC)
         RecomNav.tabBarItem.title = "推荐"
         RecomNav.tabBarItem.image = UIImage(named:"推荐黑")
-        RecomNav.tabBarItem.selectedImage = UIImage(named:"推荐白")
+        RecomNav.tabBarItem.selectedImage = UIImage(named:"推荐白")?.withRenderingMode(.alwaysOriginal)
+        RecomNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         let  MyVC  = MineViewController()
         MyVC.title = "我的"
         let MyNav = UINavigationController(rootViewController:MyVC)
         MyNav.tabBarItem.title = "我的"
         MyNav.tabBarItem.image = UIImage(named:"我的黑")
-        MyNav.tabBarItem.selectedImage = UIImage(named:"我的白")
+        MyNav.tabBarItem.selectedImage = UIImage(named:"我的白")?.withRenderingMode(.alwaysOriginal)
+        MyNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         // 添加工具栏
         let items = [MarketNav,StroeNav,RecomNav,MyNav]
@@ -127,17 +134,15 @@ class TabBarViewController: UITabBarController {
          }
          */
         //tabBar 底部工具栏背景颜色 (以下两个都行)
-        self.tabBar.barTintColor = UIColor.orange
-        self.tabBar.backgroundColor = UIColor.brown
+        self.tabBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
+//        self.tabBar.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
+//        self.tabBar.backgroundColor = UIColor.brown
+//        self.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
+        //设置 tabBar 工具栏字体颜色 (未选中  和  选中)
         
-//        //设置 tabBar 工具栏字体颜色 (未选中  和  选中)
 //        UITabBarItem.appearance().setTitleTextAttributes(NSDictionary(object:UIColor.white, forKey:NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject], for:UIControlState.normal);
 //        UITabBarItem.appearance().setTitleTextAttributes(NSDictionary(object:UIColor.red, forKey:NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject], for:UIControlState.selected);
-//        
-        
-        
         
     }
-
 }

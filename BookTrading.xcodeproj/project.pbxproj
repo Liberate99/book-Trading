@@ -15,10 +15,11 @@
 		187A22F120833BAD00091047 /* BookTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22F020833BAD00091047 /* BookTradingTests.swift */; };
 		187A22FC20833BAD00091047 /* BookTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22FB20833BAD00091047 /* BookTradingUITests.swift */; };
 		188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0BE20908368007F521C /* TabBarViewController.swift */; };
-		188FF0C5209086E6007F521C /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C4209086E6007F521C /* MarketViewController.swift */; };
 		188FF0C720908710007F521C /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C620908710007F521C /* StoreViewController.swift */; };
 		188FF0C92090873A007F521C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0C82090873A007F521C /* RecommendViewController.swift */; };
 		188FF0CB20908755007F521C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0CA20908755007F521C /* MineViewController.swift */; };
+		188FF0D42091D102007F521C /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0D22091D102007F521C /* MarketViewController.swift */; };
+		188FF0D52091D102007F521C /* MarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0D32091D102007F521C /* MarketViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +54,11 @@
 		187A22FB20833BAD00091047 /* BookTradingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTradingUITests.swift; sourceTree = "<group>"; };
 		187A22FD20833BAD00091047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188FF0BE20908368007F521C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		188FF0C4209086E6007F521C /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		188FF0C620908710007F521C /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		188FF0C82090873A007F521C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		188FF0CA20908755007F521C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		188FF0D22091D102007F521C /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		188FF0D32091D102007F521C /* MarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,8 @@
 		188FF0C020908657007F521C /* market */ = {
 			isa = PBXGroup;
 			children = (
-				188FF0C4209086E6007F521C /* MarketViewController.swift */,
+				188FF0D22091D102007F521C /* MarketViewController.swift */,
+				188FF0D32091D102007F521C /* MarketViewController.xib */,
 			);
 			path = market;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */,
 				187A22E320833BAC00091047 /* Assets.xcassets in Resources */,
 				187A22E120833BAB00091047 /* Main.storyboard in Resources */,
@@ -320,12 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				188FF0C720908710007F521C /* StoreViewController.swift in Sources */,
-				188FF0C5209086E6007F521C /* MarketViewController.swift in Sources */,
 				187A22DE20833BAB00091047 /* ViewController.swift in Sources */,
 				188FF0CB20908755007F521C /* MineViewController.swift in Sources */,
 				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				188FF0C92090873A007F521C /* RecommendViewController.swift in Sources */,
+				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  MarketViewController.swift
 //  BookTrading
 //
-//  Created by apple on 2018/4/25.
+//  Created by apple on 2018/4/26.
 //  Copyright © 2018年 Liberate. All rights reserved.
 //
 
@@ -10,9 +10,13 @@ import UIKit
 
 class MarketViewController: UIViewController {
 
+    @IBOutlet weak var underScrollView: UIScrollView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        underScrollView.backgroundColor = UIColor.green
         // Do any additional setup after loading the view.
     }
 
