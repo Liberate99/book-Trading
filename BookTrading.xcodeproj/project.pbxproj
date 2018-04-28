@@ -23,6 +23,8 @@
 		188FF0DD20923F6A007F521C /* RecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DB20923F6A007F521C /* RecommendViewController.xib */; };
 		188FF0E020923F8A007F521C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0DE20923F8A007F521C /* MineViewController.swift */; };
 		188FF0E120923F8A007F521C /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DF20923F8A007F521C /* MineViewController.xib */; };
+		188FF0E52094170A007F521C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E32094170A007F521C /* LogInViewController.swift */; };
+		188FF0E62094170A007F521C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E42094170A007F521C /* LogInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		188FF0DB20923F6A007F521C /* RecommendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendViewController.xib; sourceTree = "<group>"; };
 		188FF0DE20923F8A007F521C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		188FF0DF20923F8A007F521C /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		188FF0E32094170A007F521C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		188FF0E42094170A007F521C /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		187A22DA20833BAB00091047 /* BookTrading */ = {
 			isa = PBXGroup;
 			children = (
+				188FF0E2209416C8007F521C /* login */,
 				187A22E720833BAC00091047 /* Info.plist */,
 				187A22DB20833BAB00091047 /* AppDelegate.swift */,
 				187A22DD20833BAB00091047 /* ViewController.swift */,
@@ -198,6 +203,15 @@
 				187A22E420833BAC00091047 /* LaunchScreen.storyboard */,
 			);
 			path = info;
+			sourceTree = "<group>";
+		};
+		188FF0E2209416C8007F521C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				188FF0E32094170A007F521C /* LogInViewController.swift */,
+				188FF0E42094170A007F521C /* LogInViewController.xib */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FF0E62094170A007F521C /* LogInViewController.xib in Resources */,
 				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
 				187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */,
@@ -339,6 +354,7 @@
 				188FF0DC20923F6A007F521C /* RecommendViewController.swift in Sources */,
 				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
 				188FF0E020923F8A007F521C /* MineViewController.swift in Sources */,
+				188FF0E52094170A007F521C /* LogInViewController.swift in Sources */,
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,
 				188FF0D820923F52007F521C /* StoreViewController.swift in Sources */,

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="BookTrading" customModuleProvider="target">
+            <connections>
+                <outlet property="LoginButton" destination="yE3-2t-MRf" id="6Zj-p4-fcP"/>
+                <outlet property="PasswordTextField" destination="qx0-eb-KWf" id="Snt-x5-AEq"/>
+                <outlet property="SignUpButton" destination="G0T-QE-XfP" id="JgS-Uk-SAQ"/>
+                <outlet property="TitleLabel" destination="jpM-Cn-upw" id="uaK-9j-YIA"/>
+                <outlet property="UsernameTextField" destination="1d3-1I-TXg" id="DGq-S7-e3p"/>
+                <outlet property="backgroundView" destination="i5M-Pr-FkT" id="IpN-q0-YSd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-Cn-upw">
+                    <rect key="frame" x="133" y="105" width="110" height="40"/>
+                    <attributedString key="attributedText">
+                        <fragment content="万卷">
+                            <attributes>
+                                <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="28" name="PingFangSC-Light"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-eb-KWf">
+                    <rect key="frame" x="68" y="354" width="240" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="iBX-5q-AD7"/>
+                        <constraint firstAttribute="height" constant="35" id="kBa-5v-qgD"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE3-2t-MRf">
+                    <rect key="frame" x="169" y="453" width="37" height="34"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginButtonAction:" destination="-1" eventType="touchUpInside" id="ZyE-7V-B8c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-QE-XfP">
+                    <rect key="frame" x="125" y="544" width="33" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Ra1-EB-Jtu"/>
+                        <constraint firstAttribute="width" constant="33" id="S5L-A7-BTt"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="注册">
+                                <attributes>
+                                    <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="，加入我们" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-st-mTd">
+                    <rect key="frame" x="161" y="549" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-1I-TXg">
+                    <rect key="frame" x="69" y="261" width="240" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="qbO-Wc-8Cu"/>
+                        <constraint firstAttribute="height" constant="35" id="y3s-Xd-sKk"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G0T-QE-XfP" firstAttribute="top" secondItem="qx0-eb-KWf" secondAttribute="bottom" constant="155" id="05g-mF-r9D"/>
+                <constraint firstItem="qx0-eb-KWf" firstAttribute="centerX" secondItem="jpM-Cn-upw" secondAttribute="centerX" id="2ba-We-NFt"/>
+                <constraint firstItem="G0T-QE-XfP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="125" id="BxS-Dt-TOR"/>
+                <constraint firstItem="1d3-1I-TXg" firstAttribute="top" secondItem="jpM-Cn-upw" secondAttribute="bottom" constant="116.5" id="JQw-ww-42A"/>
+                <constraint firstItem="qx0-eb-KWf" firstAttribute="centerX" secondItem="yE3-2t-MRf" secondAttribute="centerX" id="KdM-1s-G0U"/>
+                <constraint firstItem="qx0-eb-KWf" firstAttribute="top" secondItem="1d3-1I-TXg" secondAttribute="bottom" constant="58" id="Lv5-0n-aY8"/>
+                <constraint firstItem="jpM-Cn-upw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="85" id="Oa8-Vn-czx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jpM-Cn-upw" secondAttribute="trailing" constant="132" id="P3u-FM-TSl"/>
+                <constraint firstItem="1d3-1I-TXg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="Ton-6N-R1e"/>
+                <constraint firstItem="1d3-1I-TXg" firstAttribute="centerX" secondItem="gBF-st-mTd" secondAttribute="centerX" constant="-15.5" id="cOA-30-GyT"/>
+                <constraint firstItem="G0T-QE-XfP" firstAttribute="centerY" secondItem="gBF-st-mTd" secondAttribute="centerY" id="dX4-Ly-FiD"/>
+                <constraint firstItem="yE3-2t-MRf" firstAttribute="top" secondItem="qx0-eb-KWf" secondAttribute="bottom" constant="64" id="ezD-PU-n8s"/>
+                <constraint firstItem="jpM-Cn-upw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="133" id="gBU-h1-eEC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="66.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
