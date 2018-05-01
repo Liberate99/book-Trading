@@ -25,6 +25,8 @@
 		188FF0E120923F8A007F521C /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DF20923F8A007F521C /* MineViewController.xib */; };
 		188FF0E52094170A007F521C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E32094170A007F521C /* LogInViewController.swift */; };
 		188FF0E62094170A007F521C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E42094170A007F521C /* LogInViewController.xib */; };
+		188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E720984BC4007F521C /* MarketTableViewCell.swift */; };
+		188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E820984BC4007F521C /* MarketTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		188FF0DF20923F8A007F521C /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		188FF0E32094170A007F521C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		188FF0E42094170A007F521C /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		188FF0E720984BC4007F521C /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
+		188FF0E820984BC4007F521C /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			children = (
 				188FF0D22091D102007F521C /* MarketViewController.swift */,
 				188FF0D32091D102007F521C /* MarketViewController.xib */,
+				188FF0E720984BC4007F521C /* MarketTableViewCell.swift */,
+				188FF0E820984BC4007F521C /* MarketTableViewCell.xib */,
 			);
 			path = market;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */,
 				188FF0E62094170A007F521C /* LogInViewController.xib in Resources */,
 				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
@@ -358,6 +365,7 @@
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,
 				188FF0D820923F52007F521C /* StoreViewController.swift in Sources */,
+				188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
