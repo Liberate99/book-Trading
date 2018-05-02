@@ -85,7 +85,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
         let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]//NSAttributedStringKey
-        underTableView.backgroundColor = UIColor.gray
+        underTableView.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         
         
         //注册cell
