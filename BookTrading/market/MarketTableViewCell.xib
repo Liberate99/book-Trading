@@ -13,52 +13,109 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="180" id="KGk-i7-Jjw" customClass="MarketTableViewCell" customModule="BookTrading" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="206" id="KGk-i7-Jjw" customClass="MarketTableViewCell" customModule="BookTrading" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="205.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guP-0C-Of4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0L-RB-mmV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="HMZ-nO-ZMe"/>
+                                    <constraint firstAttribute="height" constant="206" id="S47-Zj-gmI"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84有售》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-Fx-42k">
-                                <rect key="frame" x="8" y="95" width="111" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-qA-pnA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Ch5-Tl-dGg"/>
+                                    <constraint firstAttribute="height" constant="206" id="R60-3O-8uV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84》是日本作家村上春树于2009年所发表的长篇小说。故事以双线（BOOK3为三线）进行，并以村上春树较少用的第三人称全知观点来说故事。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6Z-ba-A85">
+                                <rect key="frame" x="8" y="105" width="304" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fep-Bt-Lpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-mO-Rhw">
+                                <rect key="frame" x="275" y="163" width="27" height="27"/>
+                                <state key="normal" image="喜欢"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-8R-DAx">
+                                <rect key="frame" x="236" y="163" width="27" height="27"/>
+                                <state key="normal" image="收藏"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-sx-T3L">
+                                <rect key="frame" x="8" y="164" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VIl-Fx-42k" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leadingMargin" id="Jko-dF-mzn"/>
+                            <constraint firstItem="8QV-qA-pnA" firstAttribute="trailing" secondItem="L0L-RB-mmV" secondAttribute="trailing" id="1GQ-a8-4gx"/>
+                            <constraint firstAttribute="trailing" secondItem="UDF-mO-Rhw" secondAttribute="trailing" constant="18" id="7I3-rU-kZ6"/>
+                            <constraint firstItem="UDF-mO-Rhw" firstAttribute="leading" secondItem="NUN-8R-DAx" secondAttribute="trailing" constant="12" id="9OH-yb-huD"/>
+                            <constraint firstItem="L6Z-ba-A85" firstAttribute="leading" secondItem="Us6-sx-T3L" secondAttribute="leading" id="E9Q-Ie-96P"/>
                             <constraint firstAttribute="trailing" secondItem="L0L-RB-mmV" secondAttribute="trailing" id="Lzw-qe-0vn"/>
+                            <constraint firstItem="Us6-sx-T3L" firstAttribute="centerY" secondItem="NUN-8R-DAx" secondAttribute="centerY" constant="-2" id="NYR-K9-aOW"/>
+                            <constraint firstItem="8QV-qA-pnA" firstAttribute="top" secondItem="L0L-RB-mmV" secondAttribute="top" id="NdI-mP-kUe"/>
+                            <constraint firstItem="8QV-qA-pnA" firstAttribute="bottom" secondItem="L0L-RB-mmV" secondAttribute="bottom" id="R6e-gf-xrx"/>
+                            <constraint firstItem="Us6-sx-T3L" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leadingMargin" id="TCz-t3-X66"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" id="Wfc-Ph-eIx"/>
                             <constraint firstAttribute="bottom" secondItem="L0L-RB-mmV" secondAttribute="bottom" id="XsI-pS-QxK"/>
-                            <constraint firstItem="VIl-Fx-42k" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" constant="95" id="mRx-ev-73Z"/>
+                            <constraint firstAttribute="bottom" secondItem="UDF-mO-Rhw" secondAttribute="bottom" constant="16" id="aJq-Wd-WM4"/>
+                            <constraint firstItem="8QV-qA-pnA" firstAttribute="leading" secondItem="L0L-RB-mmV" secondAttribute="leading" id="exy-dZ-3r4"/>
+                            <constraint firstItem="L6Z-ba-A85" firstAttribute="centerX" secondItem="8QV-qA-pnA" secondAttribute="centerX" id="jsR-Cj-GVm"/>
+                            <constraint firstItem="L6Z-ba-A85" firstAttribute="centerY" secondItem="8QV-qA-pnA" secondAttribute="centerY" constant="26" id="k9B-eW-hn1"/>
+                            <constraint firstItem="UDF-mO-Rhw" firstAttribute="top" secondItem="NUN-8R-DAx" secondAttribute="top" id="lEP-br-eNA"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" id="tCs-Yd-yoC"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84有售》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-Fx-42k">
+                        <rect key="frame" x="8" y="81" width="111" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.83903488010000005" green="0.83903488010000005" blue="0.83903488010000005" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="guP-0C-Of4" secondAttribute="trailing" id="0Uw-vd-yeQ"/>
                     <constraint firstItem="guP-0C-Of4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fgy-Xd-HXW"/>
+                    <constraint firstItem="VIl-Fx-42k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="81" id="con-9E-Wpb"/>
                     <constraint firstItem="guP-0C-Of4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nCY-o2-mS3"/>
+                    <constraint firstItem="VIl-Fx-42k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="q9c-nJ-pBh"/>
                     <constraint firstItem="guP-0C-Of4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vxo-sO-hat"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="autherNameLabel" destination="Us6-sx-T3L" id="CvO-9Q-dME"/>
+                <outlet property="blackBackgroundView" destination="8QV-qA-pnA" id="LBg-Ax-Ew8"/>
                 <outlet property="bookImageBackground" destination="L0L-RB-mmV" id="IEQ-rg-EGr"/>
+                <outlet property="cellContentLabel" destination="L6Z-ba-A85" id="5rT-cJ-Jx5"/>
                 <outlet property="cellTitleLabel" destination="VIl-Fx-42k" id="Hvm-3h-wcx"/>
                 <outlet property="cellView" destination="guP-0C-Of4" id="Cgw-7k-urh"/>
+                <outlet property="collectButton" destination="NUN-8R-DAx" id="Nnb-Dw-mff"/>
+                <outlet property="likeButton" destination="UDF-mO-Rhw" id="O9o-lx-pl4"/>
             </connections>
-            <point key="canvasLocation" x="-186" y="-32"/>
+            <point key="canvasLocation" x="-1018" y="-55"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="喜欢" width="27" height="27"/>
+        <image name="收藏" width="27" height="27"/>
+    </resources>
 </document>

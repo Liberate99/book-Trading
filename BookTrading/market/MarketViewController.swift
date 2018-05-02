@@ -10,9 +10,7 @@ import UIKit
 
 class MarketViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    
-    
-    
+    //tableView
     @IBOutlet weak var underTableView: UITableView!
     
     
@@ -30,28 +28,51 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     var tableData: [String] = ["BMW", "Ferrari", "Lambo"]
     
+//    //颜色渐变
+//    func turquoiseColor() -> CAGradientLayer {
+//        let topColor = UIColor.clear
+//        let bottomColor = UIColor.gray
+//        
+//        //let gradientColors: Array <AnyObject> = [topColor.cgColor, bottomColor.cgColor]
+//        let gradientColors = [topColor.cgColor, bottomColor.cgColor]
+//        
+//        //let gradientLocations: Array <AnyObject> = [0.0 as AnyObject, 1.0 as AnyObject]
+//        let gradientLocations:[NSNumber] = [0.0, 1.0]
+//        
+//        let gradientLayer: CAGradientLayer = CAGradientLayer()
+//        gradientLayer.colors = gradientColors
+//        gradientLayer.locations = gradientLocations as? [NSNumber]
+//        return gradientLayer
+//    }
+    
     //继承tableviewdatasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MarketTableViewCell = self.underTableView.dequeueReusableCell(withIdentifier: "cell") as! MarketTableViewCell
         cell.cellTitleLabel.text = tableData[indexPath.row]
         cell.bookImageBackground.image = UIImage(named: "book.png")
         //cell.cellImg.image = UIImage(named: tableData[indexPath.row])
+        
+//        //调用渐变
+//        let background = turquoiseColor()
+////        background.frame = cell.bounds
+//        background.frame = cell.bounds
+//        cell.blackBackgroundView.layer.insertSublayer(background, at: 1)
         return cell
     }
-    //设置单元格的大小
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
+//    //设置单元格的大小
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 120
+//    }
     //设置不同种类的单元格的样式有多少
 //    override func numberOfSectionsInTableView(tableView:UITableView) ->Int{
 //    // #warning Potentially incomplete method implementation.
 //    // Return the number of sections.
 //    return 1
 //    }
+    //组数
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
