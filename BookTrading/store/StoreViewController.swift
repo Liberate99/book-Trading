@@ -8,10 +8,17 @@
 
 import UIKit
 
-class StoreViewController: UIViewController {
+class StoreViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var recommendScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var courses = [["name":"Swift","pic":"swift.png"],
+                   ["name":"Swift","pic":"swift.png"],
+                   ["name":"Swift","pic":"swift.png"]]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +33,35 @@ class StoreViewController: UIViewController {
         let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]
         
-        // scrollView
-        recommendScrollView.backgroundColor = UIColor.green
-        recommendScrollView.isPagingEnabled = true
+        /*
+         * scrollView && pageControl
+         */
+        // 尺寸
         recommendScrollView.contentSize = CGSize(width: (self.view.frame.size.width)*3, height: (self.view.frame.size.height)/3)
-        recommendScrollView.showsVerticalScrollIndicator = false
+        
+        // 关闭滚动显示条
         recommendScrollView.showsHorizontalScrollIndicator = false
+        recommendScrollView.showsVerticalScrollIndicator = false
         recommendScrollView.scrollsToTop = false
-        let numOfPages = 3
-        for i in 0...numOfPages{
-            var <#name#> = <#value#>
+        
+        // 协议代理，在本类中处理滚动事件
+        recommendScrollView.delegate = self
+        
+        // 滚动时只能停留到某一页
+        recommendScrollView.isPagingEnabled = true
+        
+        // 添加页面到滚动页面里
+        let size = recommendScrollView.bounds.size
+        for (seq,course) in courses.enumerated() {
+            var page = UIView()
+            page.backgroundColor = UIColor
             
         }
+        
+//        recommendScrollView.backgroundColor = UIColor.green
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
