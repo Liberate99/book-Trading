@@ -26,6 +26,22 @@ class StoreViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var recommendScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    // 传记
+    @IBOutlet weak var biography: UIButton!
+    // 杂志
+    @IBOutlet weak var magazine: UIButton!
+    // 生活
+    @IBOutlet weak var livelihood: UIButton!
+    // 摄影
+    @IBOutlet weak var photography: UIButton!
+    // 教育
+    @IBOutlet weak var education: UIButton!
+    // 绘画
+    @IBOutlet weak var drawing: UIButton!
+    // 音乐
+    @IBOutlet weak var music: UIButton!
+    // 其他
+    @IBOutlet weak var moreKind: UIButton!
     
     var courses = [["title":"《1Q84》",         "content":"《傲慢与偏见》是简·奥斯汀的代表作。小说讲述了乡绅之女伊丽莎白·班内特的爱情故事。",    "pic":"1Q84.png"],
                    ["title":"《傲慢与偏见》",     "content":"《傲慢与偏见》是简·奥斯汀的代表作。小说讲述了乡绅之女伊丽莎白·班内特的爱情故事。",    "pic":"傲慢与偏见.png"],
