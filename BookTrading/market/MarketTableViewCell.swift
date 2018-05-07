@@ -45,15 +45,6 @@ class MarketTableViewCell: UITableViewCell {
         //        background.frame = cell.bounds
         background.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width , height: self.bounds.size.height)
         self.bookImageBackground.layer.insertSublayer(background, at: 0)
-
-//        // Initialization code
-//        cellImg.layer.borderWidth = 1
-//        cellImg.layer.masksToBounds = true
-//        //cellImg.layer.cornerRadius = 31
-        //bookImageBackground.image = UIImage(named: "book")
-        //cellTitleLabel.backgroundColor = UIColor.brown
-//        self.backgroundColor = UIColor.green
-        // Initialization code
         
         
     }

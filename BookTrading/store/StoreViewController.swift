@@ -27,9 +27,27 @@ class StoreViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var recommendScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var courses = [["name":"Swift","pic":"1Q84.png"],
-                   ["name":"O-bjective","pic":"傲慢与偏见.png"],
-                   ["name":"C++","pic":"1Q84.png"]]
+    var courses = [["title":"《1Q84》",         "content":"《傲慢与偏见》是简·奥斯汀的代表作。小说讲述了乡绅之女伊丽莎白·班内特的爱情故事。",    "pic":"1Q84.png"],
+                   ["title":"《傲慢与偏见》",     "content":"《傲慢与偏见》是简·奥斯汀的代表作。小说讲述了乡绅之女伊丽莎白·班内特的爱情故事。",    "pic":"傲慢与偏见.png"],
+                   ["title":"《霍乱时期的爱情》",  "content":"《霍乱时期的爱情》是加西亚·马尔克斯获得诺贝尔文学奖后出版的第一部小说，讲述了一段跨越半个多世纪的爱情史诗，穷尽了所有爱情的可能性：忠贞的、隐秘的、粗暴的、羞怯的、柏拉图式的、放荡的、转瞬即逝的、生死相依的……再现了时光的无情流逝，被誉为“人类有史以来最伟大的爱情小说”，是20世纪最重要的经典文学巨著之一。",  "pic":"霍乱时期的爱情.png"]]
+    
+    //颜色渐变
+    func turquoiseColor() -> CAGradientLayer {
+        let topColor = UIColor.clear
+        let bottomColor = UIColor.black.withAlphaComponent(0.7)
+        
+        //let gradientColors: Array <AnyObject> = [topColor.cgColor, bottomColor.cgColor]
+        let gradientColors = [topColor.cgColor, bottomColor.cgColor]
+        
+        //let gradientLocations: Array <AnyObject> = [0.0 as AnyObject, 1.0 as AnyObject]
+        let gradientLocations:[NSNumber] = [0.0, 1.0]
+        
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.colors = gradientColors
+        gradientLayer.locations = gradientLocations as? [NSNumber]
+        
+        return gradientLayer
+    }
     
     // UIScrollViewDelegate方法，每次滚动结束后调用
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -95,6 +113,39 @@ class StoreViewController: UIViewController, UIScrollViewDelegate {
             let _reSize = CGSize(width: 375, height: 230)
             page.image = UIImage(named: course["pic"]!)!.reSizeImage(reSize: _reSize)
             recommendScrollView.addSubview(page)
+            
+            //let GradientView = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 230))
+            let background = turquoiseColor()
+            background.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width , height: 230)
+            page.layer.insertSublayer(background, at: 0)
+            
+            let title = UILabel(frame: CGRect(x: 0, y: 100, width: 375, height: 50))
+            title.text = course["title"]
+            //title.font.withSize(40)
+            title.font = UIFont(name: "Helvetica", size: 20)
+            title.textColor = UIColor.white
+            title.textAlignment = NSTextAlignment.center
+            page.addSubview(title)
+            
+            let content = UILabel(frame: CGRect(x: 30, y: 120, width: 315, height: 100))
+            //content.text = course["content"]
+            content.font = UIFont(name: "Helvetica", size: 12)
+            content.textColor = UIColor.white
+            
+            // 通过富文本来设置行间距
+            let paraph = NSMutableParagraphStyle()
+            // 将行间距设置为28
+            paraph.lineSpacing = 7
+            // 字体居中
+            paraph.alignment = NSTextAlignment.center
+            // 字体尾部截取
+            paraph.lineBreakMode = NSLineBreakMode.byTruncatingTail
+            // 样式属性集合
+            let attributes = [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 12),
+                              NSAttributedStringKey.paragraphStyle: paraph]
+            content.attributedText = NSAttributedString(string: course["content"]!, attributes: attributes)
+            content.numberOfLines = 2
+            page.addSubview(content)
         }
         
         // 页控件属性
@@ -105,7 +156,7 @@ class StoreViewController: UIViewController, UIScrollViewDelegate {
         self.view.addSubview(pageControl)
         
         //设置页空间点击事件
-        pageControl.addTarget(self, action: "pageChanged", for: UIControlEvents.valueChanged)
+        pageControl.addTarget(self, action: Selector(("pageChanged")), for: UIControlEvents.valueChanged)
         
         
     }
