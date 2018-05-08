@@ -110,8 +110,8 @@ class StoreViewController: UIViewController,UIScrollViewDelegate {
         self.pageControl.numberOfPages = courses.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.red
-        self.pageControl.pageIndicatorTintColor = UIColor.black
-        self.pageControl.currentPageIndicatorTintColor = UIColor.green
+//        self.pageControl.pageIndicatorTintColor = UIColor.black
+//        self.pageControl.currentPageIndicatorTintColor = UIColor.green
         self.view.addSubview(pageControl)
     }
     
