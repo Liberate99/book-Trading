@@ -14,9 +14,9 @@ class TabBarViewController: UITabBarController {
     
     var _backView:UIView? = nil
     //var items:NSArray = []
-    let NameArr = ["书市","书库","推荐","我的"]
-    let PicArr = ["书市黑","书库黑","推荐黑","我的黑"]
-    let PicSelectArr = ["书市白","书库白","推荐白","我的白"]
+    let NameArr = ["书市","书库","消息","我的"]
+    let PicArr = ["书市黑","书库黑","消息黑","我的黑"]
+    let PicSelectArr = ["书市白","书库白","消息白","我的白"]
     let VCArr = [MarketViewController(),StoreViewController(),RecommendViewController(),MineViewController()]
     
     //初始化数组
@@ -72,11 +72,11 @@ class TabBarViewController: UITabBarController {
         StroeNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         let  RecomVC  = RecommendViewController()
-        RecomVC.title = "推荐"
+        RecomVC.title = "消息"
         let RecomNav = UINavigationController(rootViewController:RecomVC)
-        RecomNav.tabBarItem.title = "推荐"
-        RecomNav.tabBarItem.image = UIImage(named:"推荐黑")
-        RecomNav.tabBarItem.selectedImage = UIImage(named:"推荐白")?.withRenderingMode(.alwaysOriginal)
+        RecomNav.tabBarItem.title = "消息"
+        RecomNav.tabBarItem.image = UIImage(named:"消息黑")
+        RecomNav.tabBarItem.selectedImage = UIImage(named:"消息白")?.withRenderingMode(.alwaysOriginal)
         RecomNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         let  MyVC  = MineViewController()

@@ -10,7 +10,6 @@
 		187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22DB20833BAB00091047 /* AppDelegate.swift */; };
 		187A22DE20833BAB00091047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22DD20833BAB00091047 /* ViewController.swift */; };
 		187A22E120833BAB00091047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A22DF20833BAB00091047 /* Main.storyboard */; };
-		187A22E320833BAC00091047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187A22E220833BAC00091047 /* Assets.xcassets */; };
 		187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A22E420833BAC00091047 /* LaunchScreen.storyboard */; };
 		187A22F120833BAD00091047 /* BookTradingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22F020833BAD00091047 /* BookTradingTests.swift */; };
 		187A22FC20833BAD00091047 /* BookTradingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22FB20833BAD00091047 /* BookTradingUITests.swift */; };
@@ -27,6 +26,7 @@
 		188FF0E62094170A007F521C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E42094170A007F521C /* LogInViewController.xib */; };
 		188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E720984BC4007F521C /* MarketTableViewCell.swift */; };
 		188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E820984BC4007F521C /* MarketTableViewCell.xib */; };
+		18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D270BB20A21B1200CA0092 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		187A22DB20833BAB00091047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187A22DD20833BAB00091047 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		187A22E020833BAB00091047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		187A22E220833BAC00091047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187A22E520833BAC00091047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187A22E720833BAC00091047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187A22EC20833BAD00091047 /* BookTradingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookTradingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +72,7 @@
 		188FF0E42094170A007F521C /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		188FF0E720984BC4007F521C /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
 		188FF0E820984BC4007F521C /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
+		18D270BB20A21B1200CA0092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +204,8 @@
 		188FF0CD20908787007F521C /* info */ = {
 			isa = PBXGroup;
 			children = (
+				18D270BB20A21B1200CA0092 /* Assets.xcassets */,
 				187A22DF20833BAB00091047 /* Main.storyboard */,
-				187A22E220833BAC00091047 /* Assets.xcassets */,
 				187A22E420833BAC00091047 /* LaunchScreen.storyboard */,
 			);
 			path = info;
@@ -329,9 +329,9 @@
 				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
 				187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */,
-				187A22E320833BAC00091047 /* Assets.xcassets in Resources */,
 				188FF0D920923F52007F521C /* StoreViewController.xib in Resources */,
 				187A22E120833BAB00091047 /* Main.storyboard in Resources */,
+				18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */,
 				188FF0DD20923F6A007F521C /* RecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
