@@ -12,16 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
-                <outlet property="biography" destination="xn1-Rz-VO5" id="R5H-IN-uMJ"/>
-                <outlet property="drawing" destination="nl1-Z5-JaE" id="wTx-WC-sQy"/>
-                <outlet property="education" destination="ZxG-6F-Kvv" id="cta-yA-Hac"/>
-                <outlet property="livelihood" destination="6CN-st-aiL" id="MSN-tG-XBx"/>
-                <outlet property="magazine" destination="rBb-4i-1HJ" id="XSm-Pb-lij"/>
-                <outlet property="moreKind" destination="u9U-qQ-iwK" id="dvp-Vr-nPh"/>
-                <outlet property="music" destination="FY7-UX-t5J" id="yTg-xO-x7S"/>
-                <outlet property="pageControl" destination="Mua-ZS-U5x" id="vC4-HB-ru8"/>
-                <outlet property="photography" destination="BHK-zT-kC6" id="LFK-Ll-FGo"/>
-                <outlet property="recommendScrollView" destination="f9q-ZS-qzL" id="eK7-Go-Xak"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,107 +19,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-gY-mOx">
-                    <rect key="frame" x="0.0" y="20" width="375" height="270"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xD7-7n-ugm">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L29-W8-YJf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9q-ZS-qzL">
-                    <rect key="frame" x="0.0" y="64" width="375" height="230"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Mua-ZS-U5x">
-                            <rect key="frame" x="0.0" y="185" width="375" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </pageControl>
-                    </subviews>
-                </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-Rz-VO5">
-                    <rect key="frame" x="78" y="369" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="传记">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-4i-1HJ">
-                    <rect key="frame" x="267" y="369" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="杂志">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CN-st-aiL">
-                    <rect key="frame" x="78" y="440" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="生活">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHK-zT-kC6">
-                    <rect key="frame" x="267" y="440" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="摄影">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxG-6F-Kvv">
-                    <rect key="frame" x="78" y="509" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="教育">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-Z5-JaE">
-                    <rect key="frame" x="267" y="509" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="绘画">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY7-UX-t5J">
-                    <rect key="frame" x="78" y="574" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="音乐">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9U-qQ-iwK">
-                    <rect key="frame" x="267" y="574" width="34" height="32"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="其他">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="FY7-UX-t5J" firstAttribute="top" secondItem="ZxG-6F-Kvv" secondAttribute="bottom" constant="33" id="Ae3-KK-dFe"/>
-                <constraint firstItem="FY7-UX-t5J" firstAttribute="baseline" secondItem="u9U-qQ-iwK" secondAttribute="baseline" id="GiQ-EO-n4B"/>
-                <constraint firstItem="nl1-Z5-JaE" firstAttribute="leading" secondItem="u9U-qQ-iwK" secondAttribute="leading" id="Gl4-Xr-b84"/>
-                <constraint firstItem="6CN-st-aiL" firstAttribute="leading" secondItem="ZxG-6F-Kvv" secondAttribute="leading" id="K8d-qS-Mir"/>
-                <constraint firstItem="ZxG-6F-Kvv" firstAttribute="top" secondItem="6CN-st-aiL" secondAttribute="bottom" constant="37" id="KXc-Kd-CQ3"/>
-                <constraint firstItem="rBb-4i-1HJ" firstAttribute="leading" secondItem="BHK-zT-kC6" secondAttribute="leading" id="SIy-yB-iMH"/>
-                <constraint firstItem="xn1-Rz-VO5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="78" id="TaW-QG-kG4"/>
-                <constraint firstItem="BHK-zT-kC6" firstAttribute="top" secondItem="rBb-4i-1HJ" secondAttribute="bottom" constant="39" id="YUK-VB-Avi"/>
-                <constraint firstItem="6CN-st-aiL" firstAttribute="top" secondItem="xn1-Rz-VO5" secondAttribute="bottom" constant="39" id="ZZx-ef-jRA"/>
-                <constraint firstItem="xn1-Rz-VO5" firstAttribute="leading" secondItem="6CN-st-aiL" secondAttribute="leading" id="crl-cO-Jss"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rBb-4i-1HJ" secondAttribute="trailing" constant="74" id="fGM-l2-aTD"/>
-                <constraint firstItem="BHK-zT-kC6" firstAttribute="leading" secondItem="nl1-Z5-JaE" secondAttribute="leading" id="jaQ-x3-b3r"/>
-                <constraint firstItem="ZxG-6F-Kvv" firstAttribute="baseline" secondItem="nl1-Z5-JaE" secondAttribute="baseline" id="khI-n9-RHS"/>
-                <constraint firstItem="ZxG-6F-Kvv" firstAttribute="leading" secondItem="FY7-UX-t5J" secondAttribute="leading" id="lst-hL-17n"/>
-                <constraint firstItem="6CN-st-aiL" firstAttribute="baseline" secondItem="BHK-zT-kC6" secondAttribute="baseline" id="tim-1a-bS1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FY7-UX-t5J" secondAttribute="bottom" constant="61" id="yvz-lh-6CM"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.5" y="53.5"/>
         </view>
