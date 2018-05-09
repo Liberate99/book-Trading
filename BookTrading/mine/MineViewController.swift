@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MineViewController: UIViewController {
 
     @IBOutlet var backGroundView: UIView!
@@ -27,8 +28,19 @@ class MineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
+        let url = URL(string: "http://www.ouou.cn/uploadfile/2017/0116/20170116062809428.jpg")
+        let data = NSData(contentsOf: url!)
+        if data != nil {
+            userPic.image = UIImage(data: data as! Data)
+        } else {
+            userPic.image = UIImage(named: "userPic")
+            print("picture is nil! /n")
+        }
         
+        userPic.layer.cornerRadius = 35
+        userPic.layer.masksToBounds = true
         
         // myGoods
         myGoods.backgroundColor = UIColor.white
@@ -42,7 +54,7 @@ class MineViewController: UIViewController {
         
         // setting
         setting.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
+        
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent;
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
         let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
@@ -55,14 +67,5 @@ class MineViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

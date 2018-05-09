@@ -18,8 +18,8 @@
 		188FF0D52091D102007F521C /* MarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0D32091D102007F521C /* MarketViewController.xib */; };
 		188FF0D820923F52007F521C /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0D620923F52007F521C /* StoreViewController.swift */; };
 		188FF0D920923F52007F521C /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0D720923F52007F521C /* StoreViewController.xib */; };
-		188FF0DC20923F6A007F521C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0DA20923F6A007F521C /* RecommendViewController.swift */; };
-		188FF0DD20923F6A007F521C /* RecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DB20923F6A007F521C /* RecommendViewController.xib */; };
+		188FF0DC20923F6A007F521C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0DA20923F6A007F521C /* MessageViewController.swift */; };
+		188FF0DD20923F6A007F521C /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DB20923F6A007F521C /* MessageViewController.xib */; };
 		188FF0E020923F8A007F521C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0DE20923F8A007F521C /* MineViewController.swift */; };
 		188FF0E120923F8A007F521C /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0DF20923F8A007F521C /* MineViewController.xib */; };
 		188FF0E52094170A007F521C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E32094170A007F521C /* LogInViewController.swift */; };
@@ -64,8 +64,8 @@
 		188FF0D32091D102007F521C /* MarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketViewController.xib; sourceTree = "<group>"; };
 		188FF0D620923F52007F521C /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		188FF0D720923F52007F521C /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
-		188FF0DA20923F6A007F521C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
-		188FF0DB20923F6A007F521C /* RecommendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendViewController.xib; sourceTree = "<group>"; };
+		188FF0DA20923F6A007F521C /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		188FF0DB20923F6A007F521C /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		188FF0DE20923F8A007F521C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		188FF0DF20923F8A007F521C /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		188FF0E32094170A007F521C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				187A22DD20833BAB00091047 /* ViewController.swift */,
 				188FF0CD20908787007F521C /* info */,
 				188FF0C3209086B0007F521C /* mine */,
-				188FF0C220908676007F521C /* recommend */,
+				188FF0C220908676007F521C /* message */,
 				188FF0C120908664007F521C /* store */,
 				188FF0C020908657007F521C /* market */,
 				188FF0CC20908769007F521C /* TabBar */,
@@ -175,13 +175,13 @@
 			path = store;
 			sourceTree = "<group>";
 		};
-		188FF0C220908676007F521C /* recommend */ = {
+		188FF0C220908676007F521C /* message */ = {
 			isa = PBXGroup;
 			children = (
-				188FF0DA20923F6A007F521C /* RecommendViewController.swift */,
-				188FF0DB20923F6A007F521C /* RecommendViewController.xib */,
+				188FF0DA20923F6A007F521C /* MessageViewController.swift */,
+				188FF0DB20923F6A007F521C /* MessageViewController.xib */,
 			);
-			path = recommend;
+			path = message;
 			sourceTree = "<group>";
 		};
 		188FF0C3209086B0007F521C /* mine */ = {
@@ -332,7 +332,7 @@
 				188FF0D920923F52007F521C /* StoreViewController.xib in Resources */,
 				187A22E120833BAB00091047 /* Main.storyboard in Resources */,
 				18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */,
-				188FF0DD20923F6A007F521C /* RecommendViewController.xib in Resources */,
+				188FF0DD20923F6A007F521C /* MessageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187A22DE20833BAB00091047 /* ViewController.swift in Sources */,
-				188FF0DC20923F6A007F521C /* RecommendViewController.swift in Sources */,
+				188FF0DC20923F6A007F521C /* MessageViewController.swift in Sources */,
 				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
 				188FF0E020923F8A007F521C /* MineViewController.swift in Sources */,
 				188FF0E52094170A007F521C /* LogInViewController.swift in Sources */,

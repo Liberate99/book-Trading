@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
     let NameArr = ["书市","书库","消息","我的"]
     let PicArr = ["书市黑","书库黑","消息黑","我的黑"]
     let PicSelectArr = ["书市白","书库白","消息白","我的白"]
-    let VCArr = [MarketViewController(),StoreViewController(),RecommendViewController(),MineViewController()]
+    let VCArr = [MarketViewController(),StoreViewController(),MessageViewController(),MineViewController()]
     
     //初始化数组
     var NavVCArr:[NSObject] = [NSObject]()
@@ -71,7 +71,7 @@ class TabBarViewController: UITabBarController {
         StroeNav.tabBarItem.selectedImage = UIImage(named:"书库白")?.withRenderingMode(.alwaysOriginal)
         StroeNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
-        let  RecomVC  = RecommendViewController()
+        let  RecomVC  = MessageViewController()
         RecomVC.title = "消息"
         let RecomNav = UINavigationController(rootViewController:RecomVC)
         RecomNav.tabBarItem.title = "消息"
