@@ -30,6 +30,7 @@ class MineViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // 加载线上图片
         let url = URL(string: "http://www.ouou.cn/uploadfile/2017/0116/20170116062809428.jpg")
         let data = NSData(contentsOf: url!)
         if data != nil {
@@ -39,6 +40,7 @@ class MineViewController: UIViewController {
             print("picture is nil! /n")
         }
         
+        // 头像圆角
         userPic.layer.cornerRadius = 35
         userPic.layer.masksToBounds = true
         
