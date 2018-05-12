@@ -27,6 +27,8 @@
 		188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E720984BC4007F521C /* MarketTableViewCell.swift */; };
 		188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E820984BC4007F521C /* MarketTableViewCell.xib */; };
 		18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D270BB20A21B1200CA0092 /* Assets.xcassets */; };
+		18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */; };
+		18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		188FF0E720984BC4007F521C /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
 		188FF0E820984BC4007F521C /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
 		18D270BB20A21B1200CA0092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,16 +127,17 @@
 		187A22DA20833BAB00091047 /* BookTrading */ = {
 			isa = PBXGroup;
 			children = (
-				188FF0E2209416C8007F521C /* login */,
 				187A22E720833BAC00091047 /* Info.plist */,
 				187A22DB20833BAB00091047 /* AppDelegate.swift */,
 				187A22DD20833BAB00091047 /* ViewController.swift */,
 				188FF0CD20908787007F521C /* info */,
-				188FF0C3209086B0007F521C /* mine */,
-				188FF0C220908676007F521C /* message */,
-				188FF0C120908664007F521C /* store */,
-				188FF0C020908657007F521C /* market */,
+				188FF0E2209416C8007F521C /* login */,
+				18E42F8A20A77EAB00AB9D48 /* register */,
 				188FF0CC20908769007F521C /* TabBar */,
+				188FF0C020908657007F521C /* market */,
+				188FF0C120908664007F521C /* store */,
+				188FF0C220908676007F521C /* message */,
+				188FF0C3209086B0007F521C /* mine */,
 			);
 			path = BookTrading;
 			sourceTree = "<group>";
@@ -218,6 +223,15 @@
 				188FF0E42094170A007F521C /* LogInViewController.xib */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		18E42F8A20A77EAB00AB9D48 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */,
+				18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */,
+			);
+			path = register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */,
+				18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */,
 				188FF0E62094170A007F521C /* LogInViewController.xib in Resources */,
 				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
@@ -358,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187A22DE20833BAB00091047 /* ViewController.swift in Sources */,
+				18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */,
 				188FF0DC20923F6A007F521C /* MessageViewController.swift in Sources */,
 				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
 				188FF0E020923F8A007F521C /* MineViewController.swift in Sources */,
