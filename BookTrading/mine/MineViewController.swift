@@ -31,7 +31,7 @@ class MineViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // 加载线上图片
-        let url = URL(string: "http://www.ouou.cn/uploadfile/2017/0116/20170116062809428.jpg")
+        let url = URL(string: "http://i3.sinaimg.cn/edu/2013/0411/U3835P42DT20130411102511.jpg")
         let data = NSData(contentsOf: url!)
         if data != nil {
             userPic.image = UIImage(data: data as! Data)
