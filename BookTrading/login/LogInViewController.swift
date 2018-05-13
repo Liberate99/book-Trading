@@ -7,6 +7,36 @@
 //
 
 import UIKit
+import Foundation
+
+extension UITextField{
+    //MARK:-设置暂位文字的颜色
+    var placeholderColor:UIColor {
+        get{
+            let color =   self.value(forKeyPath: "_placeholderLabel.textColor")
+            if(color == nil){
+                return UIColor.white;
+            }
+            return color as! UIColor;
+        }
+        set{
+            self.setValue(newValue, forKeyPath: "_placeholderLabel.textColor")
+        }
+    }
+    //MARK:-设置暂位文字的字体
+    var placeholderFont:UIFont{
+        get{
+            let font =   self.value(forKeyPath: "_placeholderLabel.font")
+            if(font == nil){
+                return UIFont.systemFont(ofSize: 14);
+            }
+            return font as! UIFont;
+        }
+        set{
+            self.setValue(newValue, forKeyPath: "_placeholderLabel.font")
+        }
+    }
+}
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
 
@@ -18,9 +48,13 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var SignUpButton: UIButton!
     
     
-    
+    // 登录
     @IBAction func loginButtonAction(_ sender: Any) {
         self.present(TabBarViewController(), animated: true, completion: nil)
+    }
+    
+    // 注册
+    @IBAction func signInButtonAction(_ sender: Any) {
         
     }
     
@@ -36,16 +70,55 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
 //        UsernameTextField.clearButtonMode = .whileEditing  //编辑时出现清除按钮
 //        UsernameTextField.clearButtonMode = .unlessEditing  //编辑时不出现，编辑后才出现清除按钮
+        
+        // TextField Delegate
         UsernameTextField.delegate = self
         PasswordTextField.delegate = self
-        UsernameTextField.clearButtonMode = .always  //一直显示清除按钮
         
+        // TextField Backgroundcolor
+        UsernameTextField.backgroundColor = UIColor.black
+        PasswordTextField.backgroundColor = UIColor.black
+        
+        // 边框圆角半径
+        UsernameTextField.layer.cornerRadius = 5
+        PasswordTextField.layer.cornerRadius = 5
+        
+        // 边框粗细
+        UsernameTextField.layer.borderWidth = 1.0
+        PasswordTextField.layer.borderWidth = 1.0
+        
+        // 边框颜色-白色
+        UsernameTextField.layer.borderColor = UIColor.gray.cgColor
+        PasswordTextField.layer.borderColor = UIColor.gray.cgColor
+
+        // 文本框提示文字
+        UsernameTextField.placeholder = "请输入用户名"
+        PasswordTextField.placeholder = "请输入密码"
+        
+        // 文本框提示文字颜色
+        UsernameTextField.placeholderColor = UIColor.gray
+        PasswordTextField.placeholderColor = UIColor.gray
+        
+        // 文本框字体颜色
+        UsernameTextField.textColor = UIColor.white
+        PasswordTextField.textColor = UIColor.white
+
+        // 一直显示清除按钮
+        UsernameTextField.clearButtonMode = .always
         PasswordTextField.clearButtonMode = .always
         
-        PasswordTextField.isSecureTextEntry = true //输入内容会显示成小黑点
+        // 文本框键盘类型
+        UsernameTextField.keyboardType = UIKeyboardType.emailAddress
         
-//        self.backgroundView.backgroundColor = UIColor.brown
-        // Do any additional setup after loading the view.
+        // 居中
+        UsernameTextField.textAlignment = .center
+        UsernameTextField.contentVerticalAlignment = .center
+        PasswordTextField.textAlignment = .center
+        PasswordTextField.contentVerticalAlignment = .center
+        
+        // 密码输入
+        PasswordTextField.isSecureTextEntry = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,15 +126,5 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

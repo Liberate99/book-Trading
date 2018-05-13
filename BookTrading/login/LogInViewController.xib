@@ -75,6 +75,9 @@
                             </fragment>
                         </attributedString>
                     </state>
+                    <connections>
+                        <action selector="signInButtonAction:" destination="-1" eventType="touchUpInside" id="LgS-QE-L8j"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="，加入我们" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-st-mTd">
                     <rect key="frame" x="161" y="549" width="87" height="21"/>
@@ -88,7 +91,7 @@
                         <constraint firstAttribute="width" constant="240" id="qbO-Wc-8Cu"/>
                         <constraint firstAttribute="height" constant="35" id="y3s-Xd-sKk"/>
                     </constraints>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -110,7 +113,7 @@
                 <constraint firstItem="jpM-Cn-upw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="133" id="gBU-h1-eEC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="66.5" y="53.5"/>
+            <point key="canvasLocation" x="19" y="-35"/>
         </view>
     </objects>
 </document>
