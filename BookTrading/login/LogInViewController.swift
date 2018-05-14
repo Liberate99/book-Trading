@@ -68,9 +68,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        UsernameTextField.clearButtonMode = .whileEditing  //编辑时出现清除按钮
-//        UsernameTextField.clearButtonMode = .unlessEditing  //编辑时不出现，编辑后才出现清除按钮
-        
+       
         // TextField Delegate
         UsernameTextField.delegate = self
         PasswordTextField.delegate = self
@@ -123,8 +121,5 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
 }
