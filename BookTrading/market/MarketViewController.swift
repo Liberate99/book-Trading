@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class MarketViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -58,7 +60,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //状态栏白色
+        // 状态栏白色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent;
         
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
@@ -66,7 +68,34 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]//NSAttributedStringKey
         underTableView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         
-        //注册cell
+        // 获取tableView数据
+        Alamofire.request("http://127.0.0.1:8080/book/selectAllBooks", method: .get, parameters: nil, encoding: URLEncoding.default).responseJSON {
+            (response) in
+            
+            // 有错误就打印错误，没有就解析数据
+            if let Error = response.result.error{
+                print(Error)
+            } else if let jsonresult = response.result.value {
+                // 用 SwiftyJSON 解析数据
+                let JSONDictory = JSON(jsonresult)
+                let data = JSONDictory["data"]["items"].array
+                for dataDic in data!{
+                    let model = itemsModel()
+                }
+            }
+        }
+//        Alamofire.request("http://127.0.0.1:8080/book/selectAllBooks", method: .get, parameters: nil, encoding: URLEncoding.default)
+//            .validate()
+//            .response {response in
+//                print("Request: \(String(describing: response.request))")
+//                print("Response: \(response.response)")
+//                print("Error: \(response.error)")
+//                if let jsonresult = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {
+//                    print("Data: \(utf8Text)")
+//                }
+//        }
+        
+        // 注册cell
         let cellNib = UINib(nibName: "MarketTableViewCell", bundle: nil)
         underTableView.register(cellNib, forCellReuseIdentifier: "cell")
         

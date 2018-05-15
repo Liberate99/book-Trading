@@ -19,6 +19,7 @@ class MarketTableViewCell: UITableViewCell {
     @IBOutlet weak var promulgatorImageUnderLayer: UIView!
     @IBOutlet weak var promulgatorNameLabel: UILabel!
     @IBOutlet weak var publishDateLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     
     
     

@@ -57,7 +57,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-AV-B0c">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.4.25 发布" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-AV-B0c">
                                 <rect key="frame" x="80" y="44" width="160" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="OpP-tB-2s3"/>
@@ -87,12 +87,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#文学" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj0-uT-mtw">
+                                <rect key="frame" x="258" y="18" width="40" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="229.5" id="0hk-Al-Vmx"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="centerX" secondItem="guP-0C-Of4" secondAttribute="centerX" id="82E-cp-BUB"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" id="9fw-Xo-buS"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="Gj0-uT-mtw" secondAttribute="bottom" constant="-36" id="DkW-jX-v8a"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="Us6-sx-T3L" secondAttribute="bottom" constant="-36" id="DqT-hY-UVf"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="width" secondItem="guP-0C-Of4" secondAttribute="width" id="QGJ-ja-CaD"/>
                             <constraint firstItem="rgu-kB-oz4" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" constant="15" id="Sb8-s1-U7a"/>
@@ -102,6 +109,7 @@
                             <constraint firstItem="VIl-Fx-42k" firstAttribute="top" secondItem="L0L-RB-mmV" secondAttribute="bottom" constant="-26" id="bt2-DM-mNl"/>
                             <constraint firstItem="L6Z-ba-A85" firstAttribute="centerX" secondItem="guP-0C-Of4" secondAttribute="centerX" id="bwf-DL-Iem"/>
                             <constraint firstItem="Us6-sx-T3L" firstAttribute="leading" secondItem="rgu-kB-oz4" secondAttribute="trailing" constant="10" id="fod-ra-yDI"/>
+                            <constraint firstItem="Gj0-uT-mtw" firstAttribute="leading" secondItem="L0L-RB-mmV" secondAttribute="trailing" constant="-62" id="gud-2R-DDy"/>
                             <constraint firstAttribute="bottom" secondItem="L6Z-ba-A85" secondAttribute="bottom" constant="8.5" id="hNc-Xr-bcV"/>
                             <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" id="kgv-uX-CW7"/>
                             <constraint firstItem="rgu-kB-oz4" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" constant="13" id="lWH-sx-zWQ"/>
@@ -129,6 +137,7 @@
                 <outlet property="promulgatorImageUnderLayer" destination="rgu-kB-oz4" id="UCE-a3-srk"/>
                 <outlet property="promulgatorNameLabel" destination="Us6-sx-T3L" id="F3e-oF-rxh"/>
                 <outlet property="publishDateLabel" destination="lfp-AV-B0c" id="lgf-ub-0zR"/>
+                <outlet property="typeLabel" destination="Gj0-uT-mtw" id="Rga-Tg-4Zg"/>
             </connections>
             <point key="canvasLocation" x="-997" y="-152"/>
         </tableViewCell>

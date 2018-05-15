@@ -27,6 +27,7 @@
 		188FF0E62094170A007F521C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E42094170A007F521C /* LogInViewController.xib */; };
 		188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FF0E720984BC4007F521C /* MarketTableViewCell.swift */; };
 		188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FF0E820984BC4007F521C /* MarketTableViewCell.xib */; };
+		1894DB4D20AB3D2E000F4CBF /* book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB4C20AB3D2E000F4CBF /* book.swift */; };
 		18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D270BB20A21B1200CA0092 /* Assets.xcassets */; };
 		18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */; };
 		18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */; };
@@ -77,6 +78,7 @@
 		188FF0E42094170A007F521C /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		188FF0E720984BC4007F521C /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
 		188FF0E820984BC4007F521C /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
+		1894DB4C20AB3D2E000F4CBF /* book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book.swift; sourceTree = "<group>"; };
 		18D270BB20A21B1200CA0092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				187A22DB20833BAB00091047 /* AppDelegate.swift */,
 				187A22DD20833BAB00091047 /* ViewController.swift */,
 				18012AC020A9E2FD00F37B41 /* AFNetTools.swift */,
+				1894DB4C20AB3D2E000F4CBF /* book.swift */,
 				188FF0CD20908787007F521C /* info */,
 				188FF0E2209416C8007F521C /* login */,
 				18E42F8A20A77EAB00AB9D48 /* register */,
@@ -406,11 +409,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BookTrading/Pods-BookTrading-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -450,6 +455,7 @@
 				188FF0E52094170A007F521C /* LogInViewController.swift in Sources */,
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				18012AC120A9E2FD00F37B41 /* AFNetTools.swift in Sources */,
+				1894DB4D20AB3D2E000F4CBF /* book.swift in Sources */,
 				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,
 				188FF0D820923F52007F521C /* StoreViewController.swift in Sources */,
 				188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */,
