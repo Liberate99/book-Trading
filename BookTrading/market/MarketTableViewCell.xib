@@ -6,116 +6,134 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="206" id="KGk-i7-Jjw" customClass="MarketTableViewCell" customModule="BookTrading" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="231" id="KGk-i7-Jjw" customClass="MarketTableViewCell" customModule="BookTrading" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="205.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="229.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guP-0C-Of4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="229.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0L-RB-mmV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="HMZ-nO-ZMe"/>
-                                    <constraint firstAttribute="height" constant="206" id="S47-Zj-gmI"/>
+                                    <constraint firstAttribute="height" constant="180" id="xiT-jl-NiN"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-qA-pnA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgu-kB-oz4">
+                                <rect key="frame" x="15" y="13" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPic" translatesAutoresizingMaskIntoConstraints="NO" id="SrD-fD-L35">
+                                        <rect key="frame" x="2" y="2" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cL8-P8-d2j"/>
+                                            <constraint firstAttribute="width" constant="50" id="gEN-wW-zDa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70042968750000001" green="0.70042968750000001" blue="0.70042968750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Ch5-Tl-dGg"/>
-                                    <constraint firstAttribute="height" constant="206" id="R60-3O-8uV"/>
+                                    <constraint firstAttribute="width" constant="54" id="7dF-K2-sS7"/>
+                                    <constraint firstItem="SrD-fD-L35" firstAttribute="centerX" secondItem="rgu-kB-oz4" secondAttribute="centerX" id="Lvj-Ah-Mcs"/>
+                                    <constraint firstAttribute="height" constant="54" id="RP0-rZ-LaH"/>
+                                    <constraint firstItem="SrD-fD-L35" firstAttribute="centerY" secondItem="rgu-kB-oz4" secondAttribute="centerY" id="VBi-Lh-GDF"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84》是日本作家村上春树于2009年所发表的长篇小说。故事以双线（BOOK3为三线）进行，并以村上春树较少用的第三人称全知观点来说故事。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6Z-ba-A85">
-                                <rect key="frame" x="8" y="105" width="304" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-sx-T3L">
+                                <rect key="frame" x="79" y="18" width="129" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="fep-Bt-Lpy"/>
+                                    <constraint firstAttribute="width" constant="129" id="wdC-fO-ZNw"/>
+                                    <constraint firstAttribute="height" constant="18" id="zxe-2C-rJh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-mO-Rhw">
-                                <rect key="frame" x="275" y="163" width="27" height="27"/>
-                                <state key="normal" image="喜欢"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-8R-DAx">
-                                <rect key="frame" x="236" y="163" width="27" height="27"/>
-                                <state key="normal" image="收藏"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-sx-T3L">
-                                <rect key="frame" x="8" y="164" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-AV-B0c">
+                                <rect key="frame" x="80" y="44" width="160" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="OpP-tB-2s3"/>
+                                    <constraint firstAttribute="width" constant="160" id="cV9-EJ-6NK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.29857421875000001" green="0.29857421875000001" blue="0.29857421875000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84有售》" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-Fx-42k">
+                                <rect key="frame" x="8" y="154" width="304" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="NLq-Tt-JUF"/>
+                                    <constraint firstAttribute="height" constant="21" id="SSh-dJ-MxH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.063906250000000053" green="0.063906250000000053" blue="0.063906250000000053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84》是日本作家村上春树于2009年所发表的长篇小说。故事以双线（BOOK3为三线）进行，并以村上春树较少用的第三人称全知观点来说故事。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6Z-ba-A85">
+                                <rect key="frame" x="5" y="185" width="310" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="PUI-O2-ZGt"/>
+                                    <constraint firstAttribute="width" constant="310" id="ZhB-hm-XnA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8QV-qA-pnA" firstAttribute="trailing" secondItem="L0L-RB-mmV" secondAttribute="trailing" id="1GQ-a8-4gx"/>
-                            <constraint firstAttribute="trailing" secondItem="UDF-mO-Rhw" secondAttribute="trailing" constant="18" id="7I3-rU-kZ6"/>
-                            <constraint firstItem="UDF-mO-Rhw" firstAttribute="leading" secondItem="NUN-8R-DAx" secondAttribute="trailing" constant="12" id="9OH-yb-huD"/>
-                            <constraint firstItem="L6Z-ba-A85" firstAttribute="leading" secondItem="Us6-sx-T3L" secondAttribute="leading" id="E9Q-Ie-96P"/>
-                            <constraint firstAttribute="trailing" secondItem="L0L-RB-mmV" secondAttribute="trailing" id="Lzw-qe-0vn"/>
-                            <constraint firstItem="Us6-sx-T3L" firstAttribute="centerY" secondItem="NUN-8R-DAx" secondAttribute="centerY" constant="-2" id="NYR-K9-aOW"/>
-                            <constraint firstItem="8QV-qA-pnA" firstAttribute="top" secondItem="L0L-RB-mmV" secondAttribute="top" id="NdI-mP-kUe"/>
-                            <constraint firstItem="8QV-qA-pnA" firstAttribute="bottom" secondItem="L0L-RB-mmV" secondAttribute="bottom" id="R6e-gf-xrx"/>
-                            <constraint firstItem="Us6-sx-T3L" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leadingMargin" id="TCz-t3-X66"/>
-                            <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" id="Wfc-Ph-eIx"/>
-                            <constraint firstAttribute="bottom" secondItem="L0L-RB-mmV" secondAttribute="bottom" id="XsI-pS-QxK"/>
-                            <constraint firstAttribute="bottom" secondItem="UDF-mO-Rhw" secondAttribute="bottom" constant="16" id="aJq-Wd-WM4"/>
-                            <constraint firstItem="8QV-qA-pnA" firstAttribute="leading" secondItem="L0L-RB-mmV" secondAttribute="leading" id="exy-dZ-3r4"/>
-                            <constraint firstItem="L6Z-ba-A85" firstAttribute="centerX" secondItem="8QV-qA-pnA" secondAttribute="centerX" id="jsR-Cj-GVm"/>
-                            <constraint firstItem="L6Z-ba-A85" firstAttribute="centerY" secondItem="8QV-qA-pnA" secondAttribute="centerY" constant="26" id="k9B-eW-hn1"/>
-                            <constraint firstItem="UDF-mO-Rhw" firstAttribute="top" secondItem="NUN-8R-DAx" secondAttribute="top" id="lEP-br-eNA"/>
-                            <constraint firstItem="L0L-RB-mmV" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" id="tCs-Yd-yoC"/>
+                            <constraint firstAttribute="height" constant="229.5" id="0hk-Al-Vmx"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="centerX" secondItem="guP-0C-Of4" secondAttribute="centerX" id="82E-cp-BUB"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" id="9fw-Xo-buS"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="Us6-sx-T3L" secondAttribute="bottom" constant="-36" id="DqT-hY-UVf"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="width" secondItem="guP-0C-Of4" secondAttribute="width" id="QGJ-ja-CaD"/>
+                            <constraint firstItem="rgu-kB-oz4" firstAttribute="leading" secondItem="guP-0C-Of4" secondAttribute="leading" constant="15" id="Sb8-s1-U7a"/>
+                            <constraint firstAttribute="width" constant="320" id="XeZ-nK-4Tl"/>
+                            <constraint firstItem="lfp-AV-B0c" firstAttribute="leading" secondItem="rgu-kB-oz4" secondAttribute="trailing" constant="11" id="aKb-Yg-9S3"/>
+                            <constraint firstItem="lfp-AV-B0c" firstAttribute="top" secondItem="Us6-sx-T3L" secondAttribute="bottom" constant="8" id="bSq-Zd-HHR"/>
+                            <constraint firstItem="VIl-Fx-42k" firstAttribute="top" secondItem="L0L-RB-mmV" secondAttribute="bottom" constant="-26" id="bt2-DM-mNl"/>
+                            <constraint firstItem="L6Z-ba-A85" firstAttribute="centerX" secondItem="guP-0C-Of4" secondAttribute="centerX" id="bwf-DL-Iem"/>
+                            <constraint firstItem="Us6-sx-T3L" firstAttribute="leading" secondItem="rgu-kB-oz4" secondAttribute="trailing" constant="10" id="fod-ra-yDI"/>
+                            <constraint firstAttribute="bottom" secondItem="L6Z-ba-A85" secondAttribute="bottom" constant="8.5" id="hNc-Xr-bcV"/>
+                            <constraint firstItem="L0L-RB-mmV" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" id="kgv-uX-CW7"/>
+                            <constraint firstItem="rgu-kB-oz4" firstAttribute="top" secondItem="guP-0C-Of4" secondAttribute="top" constant="13" id="lWH-sx-zWQ"/>
+                            <constraint firstItem="VIl-Fx-42k" firstAttribute="centerX" secondItem="L0L-RB-mmV" secondAttribute="centerX" id="ws9-Wo-xgg"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《1Q84有售》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-Fx-42k">
-                        <rect key="frame" x="8" y="81" width="111" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.83903488010000005" green="0.83903488010000005" blue="0.83903488010000005" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="guP-0C-Of4" secondAttribute="trailing" id="0Uw-vd-yeQ"/>
-                    <constraint firstItem="guP-0C-Of4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fgy-Xd-HXW"/>
-                    <constraint firstItem="VIl-Fx-42k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="81" id="con-9E-Wpb"/>
-                    <constraint firstItem="guP-0C-Of4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nCY-o2-mS3"/>
-                    <constraint firstItem="VIl-Fx-42k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="q9c-nJ-pBh"/>
-                    <constraint firstItem="guP-0C-Of4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vxo-sO-hat"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Ga-Bj-fmX"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dmr-P1-Tmi"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="KhL-37-jHg"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OZO-co-YSE"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="lMW-7p-1rK"/>
+                    <constraint firstItem="guP-0C-Of4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="llm-jB-uyH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="autherNameLabel" destination="Us6-sx-T3L" id="CvO-9Q-dME"/>
-                <outlet property="blackBackgroundView" destination="8QV-qA-pnA" id="LBg-Ax-Ew8"/>
                 <outlet property="bookImageBackground" destination="L0L-RB-mmV" id="IEQ-rg-EGr"/>
                 <outlet property="cellContentLabel" destination="L6Z-ba-A85" id="5rT-cJ-Jx5"/>
                 <outlet property="cellTitleLabel" destination="VIl-Fx-42k" id="Hvm-3h-wcx"/>
                 <outlet property="cellView" destination="guP-0C-Of4" id="Cgw-7k-urh"/>
-                <outlet property="collectButton" destination="NUN-8R-DAx" id="Nnb-Dw-mff"/>
-                <outlet property="likeButton" destination="UDF-mO-Rhw" id="O9o-lx-pl4"/>
+                <outlet property="promulgatorImage" destination="SrD-fD-L35" id="R4k-68-pay"/>
+                <outlet property="promulgatorImageUnderLayer" destination="rgu-kB-oz4" id="UCE-a3-srk"/>
+                <outlet property="promulgatorNameLabel" destination="Us6-sx-T3L" id="F3e-oF-rxh"/>
+                <outlet property="publishDateLabel" destination="lfp-AV-B0c" id="lgf-ub-0zR"/>
             </connections>
-            <point key="canvasLocation" x="-1018" y="-55"/>
+            <point key="canvasLocation" x="-997" y="-152"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="喜欢" width="27" height="27"/>
-        <image name="收藏" width="27" height="27"/>
+        <image name="userPic" width="312" height="278"/>
     </resources>
 </document>

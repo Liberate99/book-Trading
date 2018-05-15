@@ -12,12 +12,20 @@ class MarketTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var bookImageBackground: UIImageView!
-    @IBOutlet weak var blackBackgroundView: UIView!
+    //    @IBOutlet weak var blackBackgroundView: UIView!
+    //    @IBOutlet weak var blackLayer: UIView!
+    
+    @IBOutlet weak var promulgatorImage: UIImageView!
+    @IBOutlet weak var promulgatorImageUnderLayer: UIView!
+    @IBOutlet weak var promulgatorNameLabel: UILabel!
+    @IBOutlet weak var publishDateLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellContentLabel: UILabel!
-    @IBOutlet weak var autherNameLabel: UILabel!
-    @IBOutlet weak var collectButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
+
+    
     
     //颜色渐变
     func turquoiseColor() -> CAGradientLayer {
@@ -40,13 +48,17 @@ class MarketTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.promulgatorImageUnderLayer.layer.cornerRadius = 27
+        self.promulgatorImageUnderLayer.layer.masksToBounds = true
+        
+        self.promulgatorImage.layer.cornerRadius = 25
+        self.promulgatorImage.layer.masksToBounds = true
+        
+
         //调用渐变
-        let background = turquoiseColor()
-        //        background.frame = cell.bounds
-        background.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width , height: self.bounds.size.height)
-        self.bookImageBackground.layer.insertSublayer(background, at: 0)
-        
-        
+        //let background = turquoiseColor()
+        //background.frame = CGRect(x:0, y:0, width:self.bookImageBackground.bounds.size.width , height: self.bookImageBackground.bounds.size.height)
+        //self.blackLayer.layer.insertSublayer(background, at: 0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Alamofire
 
 extension UITextField{
     //MARK:-设置暂位文字的颜色
@@ -47,15 +48,27 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var SignUpButton: UIButton!
     
-    
     // 登录
     @IBAction func loginButtonAction(_ sender: Any) {
+        
+        
+        let paramerts = ["userid":1]
+        Alamofire.request("http://localhost:8080/user/selectUserById?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
+            .validate()
+            .response {response in
+                print("Request: \(String(describing: response.request))")
+                print("Response: \(response.response)")
+                print("Error: \(response.error)")
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)")
+                }
+            }
         self.present(TabBarViewController(), animated: true, completion: nil)
     }
     
     // 注册
     @IBAction func signInButtonAction(_ sender: Any) {
-        
+        self.present(RegisterViewController(), animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

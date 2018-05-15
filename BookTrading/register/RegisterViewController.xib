@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
+                <outlet property="backToLoginButton" destination="unA-QV-oUf" id="eUF-yI-0cZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -80,6 +81,20 @@
                         <color key="titleColor" red="1" green="0.99379031138153684" blue="0.95215557757301905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unA-QV-oUf">
+                    <rect key="frame" x="141" y="545" width="93" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="3NB-Pr-Ktw"/>
+                        <constraint firstAttribute="width" constant="93" id="zVI-aS-ywP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="已有账号，登录">
+                        <color key="titleColor" red="0.58607421874999999" green="0.58607421874999999" blue="0.58607421874999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToLogin:" destination="-1" eventType="touchUpInside" id="Q0A-IM-Rlp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -87,6 +102,7 @@
                 <constraint firstItem="08B-Cq-M3z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="132" id="4dN-mU-QLL"/>
                 <constraint firstItem="iAe-j7-m7b" firstAttribute="top" secondItem="08B-Cq-M3z" secondAttribute="bottom" constant="47" id="Lcm-K2-lzm"/>
                 <constraint firstItem="08B-Cq-M3z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="86" id="MFk-ja-HDc"/>
+                <constraint firstItem="unA-QV-oUf" firstAttribute="top" secondItem="6YW-qE-DHB" secondAttribute="bottom" constant="25" id="ZLi-ni-BQz"/>
                 <constraint firstItem="6YW-qE-DHB" firstAttribute="top" secondItem="Vl1-4f-iPx" secondAttribute="bottom" constant="42" id="b1T-0F-KVf"/>
                 <constraint firstItem="iAe-j7-m7b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b4U-fM-pfk"/>
                 <constraint firstItem="Vl1-4f-iPx" firstAttribute="top" secondItem="k1S-y9-OjH" secondAttribute="bottom" constant="37" id="cfW-Of-N3n"/>
@@ -94,6 +110,7 @@
                 <constraint firstItem="aHz-av-5uo" firstAttribute="top" secondItem="iAe-j7-m7b" secondAttribute="bottom" constant="37" id="gxM-p4-Cco"/>
                 <constraint firstItem="Vl1-4f-iPx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lQV-yG-CKj"/>
                 <constraint firstItem="k1S-y9-OjH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mhS-5Z-k83"/>
+                <constraint firstItem="unA-QV-oUf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rKV-Tk-wbg"/>
                 <constraint firstItem="6YW-qE-DHB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rS8-fN-iS7"/>
                 <constraint firstItem="k1S-y9-OjH" firstAttribute="top" secondItem="aHz-av-5uo" secondAttribute="bottom" constant="37" id="xeb-x2-NHC"/>
             </constraints>

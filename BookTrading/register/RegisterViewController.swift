@@ -10,9 +10,15 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var backToLoginButton: UIButton!
+    
+    @IBAction func backToLogin(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
