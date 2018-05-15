@@ -17,4 +17,5 @@ class book: NSObject {
     var purchaserId = 0
     var status = 0
     var bookPrice = 0
+    var bookContent = ""
 }

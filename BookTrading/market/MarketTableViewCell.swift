@@ -55,11 +55,18 @@ class MarketTableViewCell: UITableViewCell {
         self.promulgatorImage.layer.cornerRadius = 25
         self.promulgatorImage.layer.masksToBounds = true
         
+        // 两行
+        self.cellContentLabel.numberOfLines = 2
+        // 隐藏尾部并显示省略号
+        self.cellContentLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
 
-        //调用渐变
-        //let background = turquoiseColor()
-        //background.frame = CGRect(x:0, y:0, width:self.bookImageBackground.bounds.size.width , height: self.bookImageBackground.bounds.size.height)
-        //self.blackLayer.layer.insertSublayer(background, at: 0)
+        // 调用渐变
+        let background = turquoiseColor()
+//        background.frame.origin = CGPoint.zero
+//        background.frame = bookImageBackground.frame
+        background.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: UIScreen.main.bounds.width, height: 180))
+        bookImageBackground.layer.insertSublayer(background, at: 0)
+        //bookImageBackground.addSubview(gv)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
