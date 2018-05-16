@@ -18,10 +18,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     // tableView
     @IBOutlet weak var underTableView: UITableView!
     
- 
-    
-    
-    
     //    //设置单元格的大小
     //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     //        return 120
@@ -68,6 +64,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                         model.status = dataDic["status"].int ?? 0
                         model.bookPrice = dataDic["bookprice"].int ?? 0
                         model.bookContent = dataDic["bookcontent"].string ?? ""
+                        model.publishDate = dataDic["publishtime"].string ?? ""
                         
                         model.userName = dataDic["username"].string ?? ""
                         model.userPic = dataDic["userpic"].string ?? ""
@@ -77,29 +74,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                 }
         }
     }
-//    func getpromulgators(promulgatorid: Int) {
-//
-//        Alamofire.request("http://127.0.0.1:8080/user/selectUserById", method: .get, parameters: ["userid":promulgatorid], encoding: URLEncoding.default)
-//                .responseJSON{
-//                    (response) in
-//                    // 有错误就打印错误，没有就解析数据
-//                    if let Error = response.result.error{
-//                        print(Error)
-//                    } else if let jsonresult = response.result.value {
-//                        // 用 SwiftyJSON 解析数据
-//                        let JSOnDictory = JSON(jsonresult)
-//                        let model = user()
-//                        model.userPic = JSOnDictory["userpic"].string ?? ""
-//                        model.userName = JSOnDictory["username"].string ?? ""
-//                        self.promulgatorDataArray.append(model)
-//                        print("22222222222222222222")
-//                        print(model)
-//                        print(model.userName)
-//                    }
-//                }
-//        print("promulgatorDataArray===\(promulgatorDataArray.count)")
-//
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +89,8 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
    
         getBooks()
         print("bookDataArray===\(bookWithPromulgatorDataArray.count)")
+        
+        
         
         // 注册cell
         let cellNib = UINib(nibName: "MarketTableViewCell", bundle: nil)
@@ -157,7 +133,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.promulgatorNameLabel.text = bookWithPromulgatorDataArray[indexPath.row].userName
         
         // 加载发布时间
-        cell.publishDateLabel.text = "发布于\(bookWithPromulgatorDataArray[indexPath.row].publishDate)"
+        cell.publishDateLabel.text = "发布于 \(bookWithPromulgatorDataArray[indexPath.row].publishDate)"
         
         // 加载内容文本
         cell.cellContentLabel.text = bookWithPromulgatorDataArray[indexPath.row].bookContent
