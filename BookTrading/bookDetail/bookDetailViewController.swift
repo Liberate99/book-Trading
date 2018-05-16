@@ -8,9 +8,10 @@
 
 import UIKit
 
-class bookDetialViewController: UIViewController {
+class bookDetailViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    
     var str = ""
     
     

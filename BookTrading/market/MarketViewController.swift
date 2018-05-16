@@ -133,7 +133,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let BWP = bookDetialViewController()
+        let BWP = bookDetailViewController()
         BWP.str = bookWithPromulgatorDataArray[indexPath.row].autherName
 //        self.present(BWP, animated: true, completion: nil)
         self.navigationController?.pushViewController(BWP, animated: true)
