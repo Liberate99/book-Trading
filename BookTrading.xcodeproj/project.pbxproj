@@ -30,8 +30,8 @@
 		1894DB4D20AB3D2E000F4CBF /* book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB4C20AB3D2E000F4CBF /* book.swift */; };
 		1894DB4F20AB763A000F4CBF /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB4E20AB763A000F4CBF /* user.swift */; };
 		1894DB5220AC1DE0000F4CBF /* bookWithPromulgator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB5120AC1DE0000F4CBF /* bookWithPromulgator.swift */; };
-		1894DB5620AC3AE8000F4CBF /* bookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB5420AC3AE8000F4CBF /* bookDetailViewController.swift */; };
-		1894DB5720AC3AE8000F4CBF /* bookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894DB5520AC3AE8000F4CBF /* bookDetailViewController.xib */; };
+		1894DB5620AC3AE8000F4CBF /* bookDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB5420AC3AE8000F4CBF /* bookDetialViewController.swift */; };
+		1894DB5720AC3AE8000F4CBF /* bookDetialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */; };
 		18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D270BB20A21B1200CA0092 /* Assets.xcassets */; };
 		18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */; };
 		18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */; };
@@ -85,8 +85,8 @@
 		1894DB4C20AB3D2E000F4CBF /* book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book.swift; sourceTree = "<group>"; };
 		1894DB4E20AB763A000F4CBF /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		1894DB5120AC1DE0000F4CBF /* bookWithPromulgator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookWithPromulgator.swift; sourceTree = "<group>"; };
-		1894DB5420AC3AE8000F4CBF /* bookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookDetailViewController.swift; sourceTree = "<group>"; };
-		1894DB5520AC3AE8000F4CBF /* bookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bookDetailViewController.xib; sourceTree = "<group>"; };
+		1894DB5420AC3AE8000F4CBF /* bookDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookDetialViewController.swift; sourceTree = "<group>"; };
+		1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bookDetialViewController.xib; sourceTree = "<group>"; };
 		18D270BB20A21B1200CA0092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -268,8 +268,8 @@
 		1894DB5320AC3AC4000F4CBF /* bookDetail */ = {
 			isa = PBXGroup;
 			children = (
-				1894DB5420AC3AE8000F4CBF /* bookDetailViewController.swift */,
-				1894DB5520AC3AE8000F4CBF /* bookDetailViewController.xib */,
+				1894DB5420AC3AE8000F4CBF /* bookDetialViewController.swift */,
+				1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */,
 			);
 			path = bookDetail;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 			files = (
 				188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */,
 				18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */,
-				1894DB5720AC3AE8000F4CBF /* bookDetailViewController.xib in Resources */,
+				1894DB5720AC3AE8000F4CBF /* bookDetialViewController.xib in Resources */,
 				188FF0E62094170A007F521C /* LogInViewController.xib in Resources */,
 				188FF0D52091D102007F521C /* MarketViewController.xib in Resources */,
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
@@ -486,7 +486,7 @@
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				18012AC120A9E2FD00F37B41 /* AFNetTools.swift in Sources */,
 				1894DB4D20AB3D2E000F4CBF /* book.swift in Sources */,
-				1894DB5620AC3AE8000F4CBF /* bookDetailViewController.swift in Sources */,
+				1894DB5620AC3AE8000F4CBF /* bookDetialViewController.swift in Sources */,
 				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,
 				1894DB5220AC1DE0000F4CBF /* bookWithPromulgator.swift in Sources */,
 				188FF0D820923F52007F521C /* StoreViewController.swift in Sources */,
