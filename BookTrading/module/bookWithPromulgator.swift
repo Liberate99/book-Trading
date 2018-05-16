@@ -1,5 +1,5 @@
 //
-//  book.swift
+//  bookWithPromulgator.swift
 //  BookTrading
 //
 //  Created by apple on 2018/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class book: NSObject {
+class bookWithPromulgator: NSObject {
     var bookId = 0
     var bookName = ""
     var autherName = ""
@@ -18,4 +18,9 @@ class book: NSObject {
     var status = 0
     var bookPrice = 0
     var bookContent = ""
+    var publishDate = ""
+
+    var userName = ""
+    var passWord = ""
+    var userPic = ""
 }

@@ -56,11 +56,11 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         Alamofire.request("http://localhost:8080/user/selectUserById?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
             .validate()
             .response {response in
-                print("Request: \(String(describing: response.request))")
-                print("Response: \(response.response)")
-                print("Error: \(response.error)")
+//                print("Request: \(String(describing: response.request))")
+//                print("Response: \(response.response)")
+//                print("Error: \(response.error)")
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)")
+//                    print("Data: \(utf8Text)")
                 }
             }
         self.present(TabBarViewController(), animated: true, completion: nil)
