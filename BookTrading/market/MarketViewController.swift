@@ -17,7 +17,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     // tableView
     @IBOutlet weak var underTableView: UITableView!
-    
     //    //设置单元格的大小
     //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     //        return 120
@@ -28,11 +27,9 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     //    // Return the number of sections.
     //    return 1
     //    }
-    
-    
-    
     //组数
     func numberOfSections(in tableView: UITableView) -> Int {
+//        return bookWithPromulgatorDataArray.count
         return 1
     }
     
@@ -103,10 +100,8 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         return bookWithPromulgatorDataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell: MarketTableViewCell = self.underTableView.dequeueReusableCell(withIdentifier: "cell") as! MarketTableViewCell
         
-        print("bookDataArray===\(bookWithPromulgatorDataArray.count)")
         // 加载主题文本
         cell.cellTitleLabel.text = "《\(bookWithPromulgatorDataArray[indexPath.row].bookName)》有售"
         // 加载书籍图片
@@ -118,7 +113,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.bookImageBackground.image = UIImage(named: "无法加载图片")
             print("picture is nil! /n")
         }
-        
         // 加载发布者图片
         let promulgatorPicURL = URL(string: bookWithPromulgatorDataArray[indexPath.row].userPic)
         let promulgatorPicData = NSData(contentsOf: promulgatorPicURL!)
@@ -128,17 +122,23 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.promulgatorImage.image = UIImage(named: "userPic")
             print("picture is nil! /n")
         }
-        
         // 加载发布者姓名
         cell.promulgatorNameLabel.text = bookWithPromulgatorDataArray[indexPath.row].userName
-        
         // 加载发布时间
         cell.publishDateLabel.text = "发布于 \(bookWithPromulgatorDataArray[indexPath.row].publishDate)"
-        
         // 加载内容文本
         cell.cellContentLabel.text = bookWithPromulgatorDataArray[indexPath.row].bookContent
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let BWP = bookDetialViewController()
+        BWP.str = bookWithPromulgatorDataArray[indexPath.row].autherName
+//        self.present(BWP, animated: true, completion: nil)
+        self.navigationController?.pushViewController(BWP, animated: true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
