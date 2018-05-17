@@ -20,8 +20,9 @@ class bookDetialViewController: UIViewController {
     @IBOutlet weak var bookPicImage: UIImageView!
     @IBOutlet weak var bookPriceLabel: UILabel!
     @IBOutlet weak var bookNameLabel: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var collectButton: UIButton!
     @IBOutlet weak var bookContentLabel: UILabel!
-    
     
     /**
      *  加载数据
@@ -78,6 +79,13 @@ class bookDetialViewController: UIViewController {
         }
     }
     
+    @IBAction func purchase(_ sender: Any) {
+        print("购买\(bookId)")
+    }
+    
+    @IBAction func collect(_ sender: Any) {
+        print("收藏\(bookId)")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

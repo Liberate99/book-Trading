@@ -16,9 +16,11 @@
                 <outlet property="bookNameLabel" destination="QJI-iF-Ycd" id="lDi-ep-zgD"/>
                 <outlet property="bookPicImage" destination="lVu-7a-JRu" id="MSw-iW-yO1"/>
                 <outlet property="bookPriceLabel" destination="dXg-6Q-MXa" id="yfP-GY-CeE"/>
+                <outlet property="collectButton" destination="ntb-9B-fvQ" id="vpT-C0-eFJ"/>
                 <outlet property="promulgatorNameLabel" destination="QUY-gP-ufC" id="isc-Be-Wm1"/>
                 <outlet property="promulgatorPicImage" destination="e7x-g5-rdS" id="oTh-BK-XSj"/>
                 <outlet property="publishDate" destination="Vio-55-CPe" id="xCK-bx-0HO"/>
+                <outlet property="purchaseButton" destination="yl6-a3-4kQ" id="Abk-do-pvY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,14 +56,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHv-jJ-zno">
-                    <rect key="frame" x="16" y="298" width="9" height="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHv-jJ-zno">
+                    <rect key="frame" x="16" y="298" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-6Q-MXa">
-                    <rect key="frame" x="29" y="296" width="330" height="21"/>
+                    <rect key="frame" x="49" y="296" width="330" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="330" id="DX6-2w-TDM"/>
                         <constraint firstAttribute="height" constant="21" id="Xe0-2K-1Ot"/>
@@ -75,12 +77,18 @@
                     <state key="normal" title="购买">
                         <color key="titleColor" red="0.24867187499999999" green="0.24867187499999999" blue="0.24867187499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="purchase:" destination="-1" eventType="touchUpInside" id="Xbg-0K-WAQ"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-9B-fvQ">
                     <rect key="frame" x="314" y="326" width="31" height="30"/>
                     <state key="normal" title="收藏">
                         <color key="titleColor" red="0.24867187499999999" green="0.24867187499999999" blue="0.24867187499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="collect:" destination="-1" eventType="touchUpInside" id="3cW-Ey-5vr"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bookcontent" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-iG-LJ0">
                     <rect key="frame" x="16" y="374" width="343" height="20.5"/>
