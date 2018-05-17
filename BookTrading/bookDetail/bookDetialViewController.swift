@@ -14,6 +14,7 @@ class bookDetialViewController: UIViewController {
     
     var bookId = 0
     
+    
     @IBOutlet weak var promulgatorPicImage: UIImageView!
     @IBOutlet weak var promulgatorNameLabel: UILabel!
     @IBOutlet weak var publishDate: UILabel!
@@ -79,7 +80,7 @@ class bookDetialViewController: UIViewController {
     }
     
     @IBAction func purchase(_ sender: Any) {
-        var purchaseAlert = UIAlertController(title: "购买", message: "确认要用\(self.bookPriceLabel.text!)购买\(self.bookNameLabel.text!)吗?", preferredStyle: .alert)
+        let purchaseAlert = UIAlertController(title: "购买", message: "确认要用\(self.bookPriceLabel.text!)购买\(self.bookNameLabel.text!)吗?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
@@ -92,11 +93,19 @@ class bookDetialViewController: UIViewController {
     }
     
     @IBAction func collect(_ sender: Any) {
+        
+        // 显示提示  http://www.hangge.com/blog/cache/detail_2033.html
+        SwiftNotice.showText("收藏！！！！")
+        
         print("收藏\(bookId)")
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // 请求参数 并填充
         getBooks(bookid: bookId)
