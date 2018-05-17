@@ -73,13 +73,21 @@ class bookDetialViewController: UIViewController {
                     let style = NSMutableParagraphStyle()
                     style.lineSpacing = 8
                     nameStr.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSMakeRange(0, nameString.characters.count))
-
                     self.bookContentLabel.attributedText = nameStr
                 }
         }
     }
     
     @IBAction func purchase(_ sender: Any) {
+        var purchaseAlert = UIAlertController(title: "购买", message: "确认要用\(self.bookPriceLabel.text!)购买\(self.bookNameLabel.text!)吗?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+            action in
+            print("点击了确定")
+        })
+        purchaseAlert.addAction(okAction)
+        purchaseAlert.addAction(cancelAction)
+        self.present(purchaseAlert, animated: true, completion: nil)
         print("购买\(bookId)")
     }
     

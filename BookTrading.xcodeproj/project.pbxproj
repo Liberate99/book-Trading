@@ -32,6 +32,8 @@
 		1894DB5220AC1DE0000F4CBF /* bookWithPromulgator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB5120AC1DE0000F4CBF /* bookWithPromulgator.swift */; };
 		1894DB5620AC3AE8000F4CBF /* bookDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894DB5420AC3AE8000F4CBF /* bookDetialViewController.swift */; };
 		1894DB5720AC3AE8000F4CBF /* bookDetialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */; };
+		18ADA45320ADFDE900D261D4 /* purchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADA45120ADFDE900D261D4 /* purchaseViewController.swift */; };
+		18ADA45420ADFDE900D261D4 /* purchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADA45220ADFDE900D261D4 /* purchaseViewController.xib */; };
 		18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D270BB20A21B1200CA0092 /* Assets.xcassets */; };
 		18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */; };
 		18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */; };
@@ -87,6 +89,8 @@
 		1894DB5120AC1DE0000F4CBF /* bookWithPromulgator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookWithPromulgator.swift; sourceTree = "<group>"; };
 		1894DB5420AC3AE8000F4CBF /* bookDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookDetialViewController.swift; sourceTree = "<group>"; };
 		1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bookDetialViewController.xib; sourceTree = "<group>"; };
+		18ADA45120ADFDE900D261D4 /* purchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseViewController.swift; sourceTree = "<group>"; };
+		18ADA45220ADFDE900D261D4 /* purchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = purchaseViewController.xib; sourceTree = "<group>"; };
 		18D270BB20A21B1200CA0092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E42F8B20A77F3400AB9D48 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		18E42F8C20A77F3400AB9D48 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				188FF0C220908676007F521C /* message */,
 				188FF0C3209086B0007F521C /* mine */,
 				1894DB5320AC3AC4000F4CBF /* bookDetail */,
+				18ADA45020ADFDAD00D261D4 /* purchase */,
 			);
 			path = BookTrading;
 			sourceTree = "<group>";
@@ -272,6 +277,15 @@
 				1894DB5520AC3AE8000F4CBF /* bookDetialViewController.xib */,
 			);
 			path = bookDetail;
+			sourceTree = "<group>";
+		};
+		18ADA45020ADFDAD00D261D4 /* purchase */ = {
+			isa = PBXGroup;
+			children = (
+				18ADA45120ADFDE900D261D4 /* purchaseViewController.swift */,
+				18ADA45220ADFDE900D261D4 /* purchaseViewController.xib */,
+			);
+			path = purchase;
 			sourceTree = "<group>";
 		};
 		18E42F8A20A77EAB00AB9D48 /* register */ = {
@@ -407,6 +421,7 @@
 				187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */,
 				188FF0D920923F52007F521C /* StoreViewController.xib in Resources */,
 				187A22E120833BAB00091047 /* Main.storyboard in Resources */,
+				18ADA45420ADFDE900D261D4 /* purchaseViewController.xib in Resources */,
 				18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */,
 				188FF0DD20923F6A007F521C /* MessageViewController.xib in Resources */,
 			);
@@ -477,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1894DB4F20AB763A000F4CBF /* user.swift in Sources */,
+				18ADA45320ADFDE900D261D4 /* purchaseViewController.swift in Sources */,
 				187A22DE20833BAB00091047 /* ViewController.swift in Sources */,
 				18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */,
 				188FF0DC20923F6A007F521C /* MessageViewController.swift in Sources */,
