@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 extension UITextField{
     //MARK:-设置暂位文字的颜色
@@ -40,7 +41,7 @@ extension UITextField{
 }
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
-
+    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -51,19 +52,43 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     // 登录
     @IBAction func loginButtonAction(_ sender: Any) {
         
+        var userName = ""
+        var passWord:Int? = nil
         
-        let paramerts = ["userid":1]
-        Alamofire.request("http://localhost:8080/user/selectUserById?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
-            .validate()
-            .response {response in
-//                print("Request: \(String(describing: response.request))")
-//                print("Response: \(response.response)")
-//                print("Error: \(response.error)")
-                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                    print("Data: \(utf8Text)")
-                }
+        print(UsernameTextField.text ?? "")
+        print(PasswordTextField.text ?? "")
+        
+        if (UsernameTextField.text == "")||(PasswordTextField.text == "") {
+            print("信息为空")
+            SwiftNotice.showText("请输入用户名或密码")
+        } else {
+            let paramerts = ["username":UsernameTextField.text!]
+            print(paramerts)
+            Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
+                .validate()
+                .responseJSON {
+                    (response) in
+                    // 有错误就打印错误，没有就解析数据
+                    if let Error = response.result.error{
+                        print(Error)
+                    } else if let jsonresult = response.result.value {
+                        // 用 SwiftyJSON 解析数据
+                        let data = JSON(jsonresult)
+                        if data != [] {
+                            if data.array![0]["password"].string != self.PasswordTextField.text!{
+                                SwiftNotice.showText("密码错误")
+                            } else {
+                                self.present(TabBarViewController(), animated: true, completion: nil)
+                            }
+                        } else {
+                            print("用户名或密码错误")
+                            SwiftNotice.showText("用户名或密码错误")
+                        }
+                    }
+                    
             }
-        self.present(TabBarViewController(), animated: true, completion: nil)
+            //self.present(TabBarViewController(), animated: true, completion: nil)
+        }
     }
     
     // 注册
@@ -74,14 +99,16 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //收起键盘
         UsernameTextField.resignFirstResponder()
-        //打印出文本框中的值
-        print(UsernameTextField.text ?? "")
+        PasswordTextField.resignFirstResponder()
+//        //打印出文本框中的值
+//        print(UsernameTextField.text ?? "")
+//        print(PasswordTextField.text ?? "")
         return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // TextField Delegate
         UsernameTextField.delegate = self
         PasswordTextField.delegate = self
@@ -101,7 +128,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         // 边框颜色-白色
         UsernameTextField.layer.borderColor = UIColor.gray.cgColor
         PasswordTextField.layer.borderColor = UIColor.gray.cgColor
-
+        
         // 文本框提示文字
         UsernameTextField.placeholder = "请输入用户名"
         PasswordTextField.placeholder = "请输入密码"
@@ -113,7 +140,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         // 文本框字体颜色
         UsernameTextField.textColor = UIColor.white
         PasswordTextField.textColor = UIColor.white
-
+        
         // 一直显示清除按钮
         UsernameTextField.clearButtonMode = .always
         PasswordTextField.clearButtonMode = .always
@@ -131,7 +158,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         PasswordTextField.isSecureTextEntry = true
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

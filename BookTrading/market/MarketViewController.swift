@@ -87,8 +87,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         getBooks()
         print("bookDataArray===\(bookWithPromulgatorDataArray.count)")
         
-        
-        
         // 注册cell
         let cellNib = UINib(nibName: "MarketTableViewCell", bundle: nil)
         underTableView.register(cellNib, forCellReuseIdentifier: "cell")

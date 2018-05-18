@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
                 <outlet property="backGroundView" destination="i5M-Pr-FkT" id="yZR-AU-5DB"/>
-                <outlet property="liked" destination="yux-pL-gYh" id="sot-Uf-2sg"/>
+                <outlet property="balance" destination="yux-pL-gYh" id="SU1-xl-9MT"/>
                 <outlet property="myCollection" destination="RH1-FM-ABc" id="CDK-dt-NWi"/>
                 <outlet property="myGoods" destination="Tfd-vG-jcm" id="GvX-Xg-C7C"/>
                 <outlet property="setting" destination="b8t-lV-oRZ" id="vJi-uH-yG5"/>
@@ -110,7 +110,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="2v1-eQ-rbI"/>
                     </constraints>
-                    <state key="normal" title="     我的赞">
+                    <state key="normal" title="     我的余额">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>

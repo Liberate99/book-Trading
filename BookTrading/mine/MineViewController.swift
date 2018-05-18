@@ -11,6 +11,8 @@ import UIKit
 
 class MineViewController: UIViewController {
 
+    var balanceNum = 100
+    
     @IBOutlet var backGroundView: UIView!
     @IBOutlet weak var userUnderView: UIView!
     @IBOutlet weak var userPic: UIImageView!
@@ -18,7 +20,7 @@ class MineViewController: UIViewController {
     @IBOutlet weak var userIntro: UILabel!
     @IBOutlet weak var myGoods: UIButton!
     @IBOutlet weak var myCollection: UIButton!
-    @IBOutlet weak var liked: UIButton!
+    @IBOutlet weak var balance: UIButton!
     @IBOutlet weak var setting: UIButton!
     
     // myGoods tapped
@@ -52,7 +54,9 @@ class MineViewController: UIViewController {
         myCollection.backgroundColor = UIColor.white
         
         // liked
-        liked.backgroundColor = UIColor.white
+        balance.backgroundColor = UIColor.white
+        balance.setTitle("    我的余额        \(balanceNum)", for:.normal)
+            //?.text = "我的余额        \(balanceNum)"
         
         // setting
         setting.backgroundColor = UIColor.white
