@@ -14,6 +14,10 @@ class bookDetialViewController: UIViewController {
     
     var bookId = 0
     
+    var purchasingBookWithPro: bookWithPromulgator = bookWithPromulgator()
+    
+    var base: baseUserClass = baseUserClass()
+
     
     @IBOutlet weak var promulgatorPicImage: UIImageView!
     @IBOutlet weak var promulgatorNameLabel: UILabel!
@@ -46,12 +50,14 @@ class bookDetialViewController: UIViewController {
                     let userPicURL = URL(string: JSOnDictory["userpic"].string!)
                     let userPicData = NSData(contentsOf: userPicURL!)
                     if userPicData != nil {
+                        self.purchasingBookWithPro.userPic = JSOnDictory["userpic"].string!
                         self.promulgatorPicImage.image = UIImage(data: userPicData! as Data)
                     } else {
                         self.promulgatorPicImage.image = UIImage(named: "无法加载图片")
                         print("picture is nil! /n")
                     }
                     // 加载书籍图片
+                    self.purchasingBookWithPro.picURL = JSOnDictory["picurl"].string!
                     let bookPicURL = URL(string: JSOnDictory["picurl"].string!)
                     let bookPicData = NSData(contentsOf: bookPicURL!)
                     if bookPicData != nil {
@@ -61,15 +67,20 @@ class bookDetialViewController: UIViewController {
                         print("picture is nil! /n")
                     }
                     // 加载书籍价格
+                    self.purchasingBookWithPro.bookPrice = JSOnDictory["bookprice"].int!
                     self.bookPriceLabel.text = "\(JSOnDictory["bookprice"])"
                     // 加载书籍名称
+                    self.purchasingBookWithPro.bookName = JSOnDictory["bookname"].string!
                     self.bookNameLabel.text = "《\(JSOnDictory["bookname"].string!)》"
                     // 加载书籍发布者名称
-                    self.promulgatorNameLabel.text = JSOnDictory["username"].string ?? ""
+                    self.purchasingBookWithPro.userName = JSOnDictory["username"].string!
+                    self.promulgatorNameLabel.text = JSOnDictory["username"].string!
                     // 加载书籍发布时间
-                    self.publishDate.text = JSOnDictory["publishtime"].string ?? ""
+                    self.purchasingBookWithPro.publishDate = JSOnDictory["publishtime"].string!
+                    self.publishDate.text = JSOnDictory["publishtime"].string!
                     // 加载书籍内容简介
-                    let nameString = JSOnDictory["bookcontent"].string ?? ""
+                    self.purchasingBookWithPro.bookContent = JSOnDictory["bookcontent"].string!
+                    let nameString = JSOnDictory["bookcontent"].string!
                     let nameStr:NSMutableAttributedString = NSMutableAttributedString(string: nameString)
                     let style = NSMutableParagraphStyle()
                     style.lineSpacing = 8
@@ -85,6 +96,9 @@ class bookDetialViewController: UIViewController {
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
             print("点击了确定")
+            // TODO set uer's balance    balance -= bookprice   user's 已购买 + book‘s id
+            Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
+            // TODO set book's status    已售出
         })
         purchaseAlert.addAction(okAction)
         purchaseAlert.addAction(cancelAction)
@@ -104,8 +118,6 @@ class bookDetialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         // 请求参数 并填充
         getBooks(bookid: bookId)
