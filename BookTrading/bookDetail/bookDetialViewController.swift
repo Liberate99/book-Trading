@@ -91,13 +91,17 @@ class bookDetialViewController: UIViewController {
     }
     
     @IBAction func purchase(_ sender: Any) {
+        // TODO if 交换功能
+        
+        // else 直接购买
         let purchaseAlert = UIAlertController(title: "购买", message: "确认要用\(self.bookPriceLabel.text!)购买\(self.bookNameLabel.text!)吗?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
+            
             print("点击了确定")
-            // TODO set uer's balance    balance -= bookprice   user's 已购买 + book‘s id
-            Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
+            // TODO set uer's balance    balance -= bookprice   user's 已购买 + book‘s id（user数据库+购买的书籍id）
+            // Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
             // TODO set book's status    已售出
         })
         purchaseAlert.addAction(okAction)
