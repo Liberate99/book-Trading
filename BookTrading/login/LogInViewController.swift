@@ -42,6 +42,9 @@ extension UITextField{
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
     
+    var base: baseUserClass = baseUserClass()
+    
+    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -52,8 +55,8 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     // 登录
     @IBAction func loginButtonAction(_ sender: Any) {
         
-        var userName = ""
-        var passWord:Int? = nil
+//        var userName = ""
+//        var passWord:Int? = nil
         
         print(UsernameTextField.text ?? "")
         print(PasswordTextField.text ?? "")
@@ -78,7 +81,10 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                             if data.array![0]["password"].string != self.PasswordTextField.text!{
                                 SwiftNotice.showText("密码错误")
                             } else {
-                                self.present(TabBarViewController(), animated: true, completion: nil)
+                                // 纪录用户名
+                                self.base.cacheSetString(key: "username", value: data.array![0]["username"].string!)
+                                let TabVC = TabBarViewController()
+                                self.present(TabVC, animated: true, completion: nil)
                             }
                         } else {
                             print("用户名或密码错误")

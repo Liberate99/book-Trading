@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class MarketViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+//    var base: baseUserClass = baseUserClass()
+    
     // 数据源
     var bookWithPromulgatorDataArray = [bookWithPromulgator]()
     
@@ -29,7 +31,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     //    }
     //组数
     func numberOfSections(in tableView: UITableView) -> Int {
-//        return bookWithPromulgatorDataArray.count
         return 1
     }
     
@@ -74,6 +75,9 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        print("==================================")
+//        print(base.cacheGetString(key: "username"));
         
         // 状态栏白色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent;
