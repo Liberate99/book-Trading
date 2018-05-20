@@ -13,4 +13,5 @@ class user: NSObject {
     var userName = ""
     var passWord = ""
     var userPic = ""
+    var balance = 0
 }

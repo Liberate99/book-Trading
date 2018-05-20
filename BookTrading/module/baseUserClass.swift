@@ -9,6 +9,8 @@
 import UIKit
 
 class baseUserClass: NSObject {
+    
+    //string
     func cacheSetString(key: String, value: String) {
         let userInfo = UserDefaults()
         userInfo.setValue(value, forKey: key)
@@ -19,4 +21,16 @@ class baseUserClass: NSObject {
         let tmpSign = userInfo.string(forKey: key)
         return tmpSign!
     }
+    
+//    //float
+//    func cacheSetFloat(key: String, value: Float) {
+//        let userInfo = UserDefaults()
+//        userInfo.setValue(value, forKey: key)
+//    }
+//    
+//    func cacheGetFloat(key: String) -> Float {
+//        let userInfo = UserDefaults()
+//        let tmpSign = userInfo.float(forKey: key)
+//        return tmpSign
+//    }
 }

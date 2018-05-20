@@ -14,6 +14,8 @@ class bookDetialViewController: UIViewController {
     
     var bookId = 0
     
+    var presentBalance = 0
+    
     var purchasingBookWithPro: bookWithPromulgator = bookWithPromulgator()
     
     var base: baseUserClass = baseUserClass()
@@ -90,9 +92,9 @@ class bookDetialViewController: UIViewController {
         }
     }
     
+    // TODO if 交换功能
+    
     @IBAction func purchase(_ sender: Any) {
-        // TODO if 交换功能
-        
         // else 直接购买
         let purchaseAlert = UIAlertController(title: "购买", message: "确认要用\(self.bookPriceLabel.text!)购买\(self.bookNameLabel.text!)吗?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -101,9 +103,47 @@ class bookDetialViewController: UIViewController {
             
             print("点击了确定")
             // TODO set uer's balance    balance -= bookprice   user's 已购买 + book‘s id（user数据库+购买的书籍id）
+            // 获取用户余额
+            
+            let parameter1 = ["username": self.base.cacheGetString(key: "username")]
+            Alamofire.request("http://127.0.0.1:8080/user/selectUserBalanceByName?", method: .get, parameters: parameter1, encoding: URLEncoding.default)
+                .validate()
+                .responseJSON{
+                    (response) in
+                    // 有错误就打印错误，没有就解析数据
+                    if let Error = response.result.error{
+                        print(Error)
+                    } else if let jsonresult = response.result.value {
+                        // 用 SwiftyJSON 解析数据
+                        let data = JSON(jsonresult)
+                        if data != [] {
+                            self.presentBalance = data.int!
+                        }
+                    }
+                }
+//            let parameter2 = ["username": self.base.cacheGetString(key: "username"),"balance" : ]
+//            Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: parameter2, encoding: URLEncoding.default)
+//                .validate()
+//                .responseJSON {
+//                    (response) in
+//                    // 有错误就打印错误，没有就解析数据
+//                    if let Error = response.result.error{
+//                        print(Error)
+//                    } else if let jsonresult = response.result.value {
+//                        // 用 SwiftyJSON 解析数据
+//                        let data = JSON(jsonresult)
+//                        if data != [] {
+//
+//                        }
+//                    }
+//            }
+            
+            //print(self.base.cacheGetString(key: "username"))
+            //var parameter = ["balance" : self.base.]
+            //Alamofire.request("http://127.0.0.1:8080/user/updateUserBalance", method: .post, parameters: <#T##Parameters?#>, encoding: )
             // Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: paramerts, encoding: URLEncoding.default)
             // TODO set book's status    已售出
-        })
+            })
         purchaseAlert.addAction(okAction)
         purchaseAlert.addAction(cancelAction)
         self.present(purchaseAlert, animated: true, completion: nil)
