@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class bookDetialViewController: UIViewController {
     
+    // 由上个页面传值过来
     var bookId = 0
     
     var presentBalance = 0
@@ -91,7 +92,7 @@ class bookDetialViewController: UIViewController {
         }
     }
     
-    // TODO if 交换功能
+    // TODO 交换
     
     // 直接购买
     @IBAction func purchase(_ sender: Any) {
@@ -100,7 +101,6 @@ class bookDetialViewController: UIViewController {
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
             print("点击了确定")
-            
             // 获取用户余额
             let parameter1 = ["username": self.base.cacheGetString(key: "username")]
             Alamofire.request("http://127.0.0.1:8080/user/selectUserBalanceByName?", method: .get, parameters: parameter1, encoding: URLEncoding.default)
@@ -115,30 +115,15 @@ class bookDetialViewController: UIViewController {
                         let data = JSON(jsonresult)
                         if data != [] {
                             self.presentBalance = data.int!
-                            print("!!!!!!!!!!!!!!!!!!!!!")
-                            print(self.presentBalance)
+                            // 更新 user --balance 余额
                             self.upDateBalance(balance: Float(self.presentBalance), price: Float(self.purchasingBookWithPro.bookPrice), username: self.base.cacheGetString(key: "username"))
-                        }else {
+                            // 更新 book --status=1（状态） --puchaserid（购买者）
+                            self.upDateStatus_PurchaserId(bookid: self.bookId, purchaserid: Int(self.base.cacheGetString(key: "userid"))!, status: 1)
+                        } else {
                             print("???????????????????")
                         }
                     }
                 }
-            // TODO set uer's balance    balance -= bookprice   user's 已购买 + book‘s id（user数据库+购买的书籍id）
-            
-            //                    (response) in
-            //                    // 有错误就打印错误，没有就解析数据
-            //                    if let Error = response.result.error{
-            //                        print(Error)
-            //                    } else if let jsonresult = response.result.value {
-            //                        // 用 SwiftyJSON 解析数据
-            //                        let data = JSON(jsonresult)
-            //                        if data != [] {
-            //
-            //                        }
-            //                    }
-            //            }
-            
-            // TODO set book's status    已售出
         })
         purchaseAlert.addAction(okAction)
         purchaseAlert.addAction(cancelAction)
@@ -146,13 +131,31 @@ class bookDetialViewController: UIViewController {
         print("购买\(bookId)")
     }
     
-    // 更新balance
+    // 更新 book--status、purchaserid
+    func upDateStatus_PurchaserId(bookid: Int,purchaserid: Int,status: Int){
+        let _parameter = ["bookid": bookid,"purchaserid": purchaserid, "status": status] as [String : Any]
+        Alamofire.request("http://127.0.0.1:8080/book/upDateBookStatusANDPurchaserId?", method: .post, parameters: _parameter, encoding: URLEncoding.default)
+            .validate()
+            .responseJSON{
+                (response) in
+                // 有错误就打印错误，没有就解析数据
+                if let Error = response.result.error{
+                    print(Error)
+                } else if let jsonresult = response.result.value {
+                    // 用 SwiftyJSON 解析数据
+                    let data = JSON(jsonresult)
+                    if data != [] {
+                        if data == 1 { print("更新成功！\(data)") }
+                        else { print("更新失败") }
+                    }
+                }
+            }
+    }
+    
+    // 更新 user--balance
     func upDateBalance(balance: Float,price: Float,username: String){
-        print(balance)
-        print("balance=======================================\(balance-price)")
-        // 修改parameter2
-        let _parameter2 = ["username": username,"balance":balance-price] as [String : Any]
-        Alamofire.request("http://127.0.0.1:8080/user/updateUserBalance?", method: .post, parameters: _parameter2, encoding: URLEncoding.default)
+        let _parameter = ["username": username,"balance":balance-price] as [String : Any]
+        Alamofire.request("http://127.0.0.1:8080/user/updateUserBalance?", method: .post, parameters: _parameter, encoding: URLEncoding.default)
             .validate()
             .responseJSON {
                 (response) in
@@ -163,7 +166,8 @@ class bookDetialViewController: UIViewController {
                     // 用 SwiftyJSON 解析数据
                     let data = JSON(jsonresult)
                     if data != [] {
-                        print(data)
+                        if data == 1 { print("更新成功！\(data)") }
+                        else { print("更新失败") }
                     }
                 }
             }
@@ -176,9 +180,7 @@ class bookDetialViewController: UIViewController {
         
         print("收藏\(bookId)")
     }
-    
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -191,16 +193,12 @@ class bookDetialViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.tabBarController?.tabBar.isHidden = true
-        //self.automaticallyAdjustsScrollViewInsets = true
         
         self.promulgatorPicImage.layer.cornerRadius = 25
         self.promulgatorPicImage.layer.masksToBounds = true
         
         self.bookContentLabel.numberOfLines = 0
-        //self.bookContentLabel.text?.appending("\n\n\n\n\n")
         self.bookContentLabel.lineBreakMode = .byClipping
-        
-        
     }
     
     

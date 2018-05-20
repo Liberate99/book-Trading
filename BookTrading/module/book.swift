@@ -15,7 +15,7 @@ class book: NSObject {
     var picURL = ""
     var promulgatorId = 0
     var purchaserId = 0
-    var status = 0
+    var status = 0      // 0是未卖出； 1是已卖出。
     var bookPrice = 0
     var bookContent = ""
     var publishDate = ""

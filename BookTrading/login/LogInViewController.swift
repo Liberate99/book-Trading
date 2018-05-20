@@ -81,11 +81,15 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                             if data.array![0]["password"].string != self.PasswordTextField.text!{
                                 SwiftNotice.showText("密码错误")
                             } else {
-                                
+                                print(data)
+                                print(data.array![0]["userid"])
+                                print("\(data.array![0]["userid"])")
+                                // 记录用户Id
+                                self.base.cacheSetString(key: "userid",   value: "\(data.array![0]["userid"])")
                                 // 纪录用户名
                                 self.base.cacheSetString(key: "userName", value: data.array![0]["username"].string!)
                                 // 记录用户图片
-                                self.base.cacheSetString(key: "userPic", value: data.array![0]["userpic"].string!)
+                                self.base.cacheSetString(key: "userPic",  value: data.array![0]["userpic"].string!)
 //                                // 记录用户余额
 //                                self.base.cacheSetFloat(key: "balance", value: data.array![0]["balance"].float!)
 //                                print("\(data.array![0]["balance"].float)")
