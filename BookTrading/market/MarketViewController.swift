@@ -76,9 +76,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        print("==================================")
-//        print(base.cacheGetString(key: "username"));
-        
         // 状态栏白色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent;
         
@@ -87,9 +84,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]//NSAttributedStringKey
         underTableView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         
-   
         getBooks()
-        print("bookDataArray===\(bookWithPromulgatorDataArray.count)")
         
         // 注册cell
         let cellNib = UINib(nibName: "MarketTableViewCell", bundle: nil)

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="exchangeViewController" customModule="BookTrading" customModuleProvider="target">
+            <connections>
+                <outlet property="ok" destination="xI0-9p-byZ" id="ybI-kA-K8G"/>
+                <outlet property="picker" destination="diH-ip-BPM" id="xzi-Px-Iwm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diH-ip-BPM">
+                    <rect key="frame" x="28" y="370" width="320" height="180"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="b5D-gg-bOI"/>
+                    </constraints>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI0-9p-byZ">
+                    <rect key="frame" x="57" y="584" width="262" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="262" id="eJN-fi-bea"/>
+                        <constraint firstAttribute="height" constant="39" id="h2e-sy-ABk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <state key="normal" title="确  定">
+                        <color key="titleColor" red="0.11388671875" green="0.11388671875" blue="0.11388671875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.66125" green="0.66125" blue="0.66125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="getPickerViewValue:" destination="-1" eventType="touchUpInside" id="AX4-3Z-woO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="diH-ip-BPM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0ef-6z-5SQ"/>
+                <constraint firstItem="xI0-9p-byZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HjN-LY-suh"/>
+                <constraint firstItem="xI0-9p-byZ" firstAttribute="top" secondItem="diH-ip-BPM" secondAttribute="bottom" constant="34" id="KIJ-FI-hDg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xI0-9p-byZ" secondAttribute="bottom" constant="44" id="xvR-db-1aC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

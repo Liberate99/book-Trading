@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18012AC120A9E2FD00F37B41 /* AFNetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18012AC020A9E2FD00F37B41 /* AFNetTools.swift */; };
+		18523ED120B1E5290090EC90 /* exchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18523ECF20B1E5290090EC90 /* exchangeViewController.swift */; };
+		18523ED220B1E5290090EC90 /* exchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18523ED020B1E5290090EC90 /* exchangeViewController.xib */; };
 		187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22DB20833BAB00091047 /* AppDelegate.swift */; };
 		187A22DE20833BAB00091047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A22DD20833BAB00091047 /* ViewController.swift */; };
 		187A22E120833BAB00091047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A22DF20833BAB00091047 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		18012AC020A9E2FD00F37B41 /* AFNetTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetTools.swift; sourceTree = "<group>"; };
+		18523ECF20B1E5290090EC90 /* exchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeViewController.swift; sourceTree = "<group>"; };
+		18523ED020B1E5290090EC90 /* exchangeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = exchangeViewController.xib; sourceTree = "<group>"; };
 		187A22D820833BAB00091047 /* BookTrading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookTrading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187A22DB20833BAB00091047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187A22DD20833BAB00091047 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18523ECC20B1E4D20090EC90 /* exchange */ = {
+			isa = PBXGroup;
+			children = (
+				18523ECF20B1E5290090EC90 /* exchangeViewController.swift */,
+				18523ED020B1E5290090EC90 /* exchangeViewController.xib */,
+			);
+			path = exchange;
+			sourceTree = "<group>";
+		};
 		187A22CF20833BAB00091047 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 				188FF0C220908676007F521C /* message */,
 				188FF0C3209086B0007F521C /* mine */,
 				1894DB5320AC3AC4000F4CBF /* bookDetail */,
+				18523ECC20B1E4D20090EC90 /* exchange */,
 			);
 			path = BookTrading;
 			sourceTree = "<group>";
@@ -411,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */,
+				18523ED220B1E5290090EC90 /* exchangeViewController.xib in Resources */,
 				18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */,
 				1894DB5720AC3AE8000F4CBF /* bookDetialViewController.xib in Resources */,
 				188FF0E62094170A007F521C /* LogInViewController.xib in Resources */,
@@ -498,6 +513,7 @@
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,
 				18012AC120A9E2FD00F37B41 /* AFNetTools.swift in Sources */,
 				18820B5320AFF5D800038BFF /* baseUserClass.swift in Sources */,
+				18523ED120B1E5290090EC90 /* exchangeViewController.swift in Sources */,
 				1894DB4D20AB3D2E000F4CBF /* book.swift in Sources */,
 				1894DB5620AC3AE8000F4CBF /* bookDetialViewController.swift in Sources */,
 				188FF0D42091D102007F521C /* MarketViewController.swift in Sources */,

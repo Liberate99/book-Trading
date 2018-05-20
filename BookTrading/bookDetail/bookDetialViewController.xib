@@ -17,6 +17,7 @@
                 <outlet property="bookPicImage" destination="lVu-7a-JRu" id="MSw-iW-yO1"/>
                 <outlet property="bookPriceLabel" destination="dXg-6Q-MXa" id="yfP-GY-CeE"/>
                 <outlet property="collectButton" destination="ntb-9B-fvQ" id="vpT-C0-eFJ"/>
+                <outlet property="exchangeButton" destination="mFc-2S-rY2" id="fce-wP-Pgb"/>
                 <outlet property="promulgatorNameLabel" destination="QUY-gP-ufC" id="isc-Be-Wm1"/>
                 <outlet property="promulgatorPicImage" destination="e7x-g5-rdS" id="oTh-BK-XSj"/>
                 <outlet property="publishDate" destination="Vio-55-CPe" id="xCK-bx-0HO"/>
@@ -73,7 +74,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl6-a3-4kQ">
-                    <rect key="frame" x="260" y="326" width="31" height="30"/>
+                    <rect key="frame" x="210" y="291" width="31" height="30"/>
                     <state key="normal" title="购买">
                         <color key="titleColor" red="0.24867187499999999" green="0.24867187499999999" blue="0.24867187499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -82,7 +83,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-9B-fvQ">
-                    <rect key="frame" x="314" y="326" width="31" height="30"/>
+                    <rect key="frame" x="314" y="291" width="31" height="30"/>
                     <state key="normal" title="收藏">
                         <color key="titleColor" red="0.24867187499999999" green="0.24867187499999999" blue="0.24867187499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -108,6 +109,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFc-2S-rY2">
+                    <rect key="frame" x="263" y="291" width="31" height="30"/>
+                    <state key="normal" title="交换">
+                        <color key="titleColor" red="0.24867187499999999" green="0.24867187499999999" blue="0.24867187499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="exchange:" destination="-1" eventType="touchUpInside" id="rh5-n8-dBo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -116,7 +126,6 @@
                 <constraint firstItem="zHv-jJ-zno" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="12" id="53l-qg-ybN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ntb-9B-fvQ" secondAttribute="trailing" constant="30" id="7YZ-cf-eAE"/>
                 <constraint firstItem="lVu-7a-JRu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="88s-uF-vzU"/>
-                <constraint firstItem="ntb-9B-fvQ" firstAttribute="leading" secondItem="yl6-a3-4kQ" secondAttribute="trailing" constant="23" id="Hgc-x4-E8P"/>
                 <constraint firstItem="dXg-6Q-MXa" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="10" id="JO2-dP-g4V"/>
                 <constraint firstItem="Vsk-iG-LJ0" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KBI-pA-kha"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lVu-7a-JRu" secondAttribute="trailing" id="OBH-qH-C4Y"/>
@@ -124,11 +133,14 @@
                 <constraint firstItem="lVu-7a-JRu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qmp-ZF-yRz"/>
                 <constraint firstItem="lVu-7a-JRu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Qrc-xQ-l8a"/>
                 <constraint firstItem="Vio-55-CPe" firstAttribute="top" secondItem="QUY-gP-ufC" secondAttribute="bottom" constant="4" id="RqN-Ih-WwK"/>
-                <constraint firstItem="ntb-9B-fvQ" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="40" id="SYH-df-Pcb"/>
+                <constraint firstItem="ntb-9B-fvQ" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="5" id="SYH-df-Pcb"/>
                 <constraint firstItem="QJI-iF-Ycd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aU2-gC-pnX"/>
                 <constraint firstItem="lVu-7a-JRu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="66" id="blK-9G-H4G"/>
-                <constraint firstItem="yl6-a3-4kQ" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="40" id="cdU-Cb-C70"/>
+                <constraint firstItem="yl6-a3-4kQ" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="5" id="cdU-Cb-C70"/>
+                <constraint firstItem="ntb-9B-fvQ" firstAttribute="leading" secondItem="mFc-2S-rY2" secondAttribute="trailing" constant="20" id="esB-Rm-cNx"/>
                 <constraint firstItem="Vio-55-CPe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="ezX-ee-9K5"/>
+                <constraint firstItem="mFc-2S-rY2" firstAttribute="top" secondItem="lVu-7a-JRu" secondAttribute="bottom" constant="5" id="hat-6V-1ba"/>
+                <constraint firstItem="mFc-2S-rY2" firstAttribute="leading" secondItem="yl6-a3-4kQ" secondAttribute="trailing" constant="22" id="hpe-QW-JW6"/>
                 <constraint firstItem="e7x-g5-rdS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jC2-iv-9Tt"/>
                 <constraint firstItem="Vsk-iG-LJ0" firstAttribute="top" secondItem="QJI-iF-Ycd" secondAttribute="bottom" constant="23" id="leJ-3M-Hbp"/>
                 <constraint firstItem="QJI-iF-Ycd" firstAttribute="top" secondItem="dXg-6Q-MXa" secondAttribute="bottom" constant="13" id="py7-OC-fbs"/>

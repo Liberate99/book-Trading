@@ -28,6 +28,7 @@ class bookDetialViewController: UIViewController {
     @IBOutlet weak var bookPriceLabel: UILabel!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var exchangeButton: UIButton!
     @IBOutlet weak var collectButton: UIButton!
     @IBOutlet weak var bookContentLabel: UILabel!
     
@@ -92,7 +93,19 @@ class bookDetialViewController: UIViewController {
         }
     }
     
-    // TODO 交换
+    // 交换
+    @IBAction func exchange(_ sender: Any) {
+
+        // TODO 查询适合交换的书（自己书的价格《= 要换书的价格》）
+        // TODO 选择自己用来交换的书
+        // TODO 实现交换
+        let EVW = exchangeViewController()
+        //EVW.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        EVW.userid = self.base.cacheGetString(key: "userid")
+        EVW.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.present(EVW, animated: true, completion: nil)
+        
+    }
     
     // 直接购买
     @IBAction func purchase(_ sender: Any) {
@@ -180,7 +193,7 @@ class bookDetialViewController: UIViewController {
         
         print("收藏\(bookId)")
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
