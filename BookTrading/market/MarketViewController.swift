@@ -66,7 +66,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                         model.promulgatorId = dataDic["promulgatorid"].int ?? 0
                         model.purchaserId = dataDic["purchaserid"].int ?? 0
                         model.status = dataDic["status"].int ?? 0
-                        model.bookPrice = dataDic["bookprice"].int ?? 0
+                        model.bookPrice = dataDic["bookprice"].float ?? 0
                         model.bookContent = dataDic["bookcontent"].string ?? ""
                         model.publishDate = dataDic["publishtime"].string ?? ""
                         model.userName = dataDic["username"].string ?? ""

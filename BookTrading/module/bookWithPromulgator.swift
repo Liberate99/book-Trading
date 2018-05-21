@@ -11,18 +11,18 @@ import UIKit
 class bookWithPromulgator: NSObject {
     // 13
     
-    var bookId = 0
-    var bookName = ""
-    var autherName = ""
-    var picURL = ""
-    var promulgatorId = 0
-    var purchaserId = 0 // 购买者
-    var status = 0
-    var bookPrice = 0
-    var bookContent = ""
-    var publishDate = ""
+    var bookId: Int = 0
+    var bookName: String = ""
+    var autherName: String = ""
+    var picURL: String = ""
+    var promulgatorId: Int = 0
+    var purchaserId: Int = 0 // 购买者
+    var status: Int = 0
+    var bookPrice: Float = 0
+    var bookContent: String = ""
+    var publishDate: String = ""
 
-    var userName = "" // 发布者
-    var passWord = ""
-    var userPic = ""
+    var userName: String = "" // 发布者
+    var passWord: String = ""
+    var userPic: String = ""
 }

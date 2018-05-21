@@ -28,9 +28,20 @@ class MineViewController: UIViewController {
     @IBOutlet weak var balance: UIButton!
     @IBOutlet weak var setting: UIButton!
     
+    @IBAction func myGoodsDetail(_ sender: Any) {
+        print("wodefabu")
+    }
+    
+    @IBAction func myCollectionDetail(_ sender: Any) {
+        
+    }
+    
     // myGoods tapped
     @objc func myGoodsTapped(_ button:UIButton){
         print("我的发布")
+        let MGV = myGoodsViewController()
+        
+        self.navigationController?.pushViewController(MGV, animated: true)
     }
     
     // getUserInfo

@@ -70,7 +70,7 @@ class bookDetialViewController: UIViewController {
                         print("picture is nil! /n")
                     }
                     // 加载书籍价格
-                    self.purchasingBookWithPro.bookPrice = JSOnDictory["bookprice"].int!
+                    self.purchasingBookWithPro.bookPrice = JSOnDictory["bookprice"].float!
                     self.bookPriceLabel.text = "\(JSOnDictory["bookprice"])"
                     // 加载书籍名称
                     self.purchasingBookWithPro.bookName = JSOnDictory["bookname"].string!
