@@ -53,7 +53,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                     //let JSONDictory = jsonresult.data
                     let data = JSOnDictory.array
                     for dataDic in data!{
-                        
                         if dataDic["status"].int != 0 {
                             continue
                         }
@@ -79,6 +78,14 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         }
     }
     
+    @objc func addBook(){
+        print("add")
+        let ABV: addBookViewController = addBookViewController()
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(ABV, animated: true)
+        self.hidesBottomBarWhenPushed = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,7 +96,13 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]//NSAttributedStringKey
         
-        refreshAction.attributedTitle = NSAttributedString.init(string: "正在下拉刷新")
+        // navigation 右按钮
+        let add = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add,target:self,action: #selector(addBook))//此处使用的图标UIBarButtonSystemItem是一个枚举.大家可以尝试一下其他值出来是什么
+        add.tintColor = UIColor.gray
+        self.navigationItem.rightBarButtonItem = add
+        
+        // 下拉刷新
+        refreshAction.attributedTitle = NSAttributedString.init(string: "正在刷新")
         refreshAction.addTarget(self, action: #selector(getBooks), for: .valueChanged )
         underTableView.addSubview(refreshAction)
         underTableView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
@@ -145,7 +158,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         BWP.bookId = bookWithPromulgatorDataArray[indexPath.row].bookId
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(BWP, animated: true)
-        
         self.hidesBottomBarWhenPushed = false
     }
     

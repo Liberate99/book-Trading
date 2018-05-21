@@ -44,6 +44,8 @@
 		18E9AD9220B2F203008126D0 /* myGoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E9AD9020B2F203008126D0 /* myGoodsViewController.xib */; };
 		18E9AD9520B2F265008126D0 /* goodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AD9320B2F265008126D0 /* goodsTableViewCell.swift */; };
 		18E9AD9620B2F265008126D0 /* goodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E9AD9420B2F265008126D0 /* goodsTableViewCell.xib */; };
+		18E9AD9E20B30E22008126D0 /* addBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AD9C20B30E22008126D0 /* addBookViewController.swift */; };
+		18E9AD9F20B30E22008126D0 /* addBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E9AD9D20B30E22008126D0 /* addBookViewController.xib */; };
 		C9D0BBEA0F50540F45D0DBBB /* Pods_BookTrading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8450298BE1D727FB8B720819 /* Pods_BookTrading.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		18E9AD9020B2F203008126D0 /* myGoodsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myGoodsViewController.xib; sourceTree = "<group>"; };
 		18E9AD9320B2F265008126D0 /* goodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goodsTableViewCell.swift; sourceTree = "<group>"; };
 		18E9AD9420B2F265008126D0 /* goodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = goodsTableViewCell.xib; sourceTree = "<group>"; };
+		18E9AD9C20B30E22008126D0 /* addBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBookViewController.swift; sourceTree = "<group>"; };
+		18E9AD9D20B30E22008126D0 /* addBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addBookViewController.xib; sourceTree = "<group>"; };
 		8450298BE1D727FB8B720819 /* Pods_BookTrading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookTrading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B343C9E6BC2FB686F8E7E78C /* Pods-BookTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookTrading/Pods-BookTrading.release.xcconfig"; sourceTree = "<group>"; };
 		E53343041414983595AA5D02 /* Pods-BookTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookTrading/Pods-BookTrading.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				18E42F8A20A77EAB00AB9D48 /* register */,
 				188FF0CC20908769007F521C /* TabBar */,
 				188FF0C020908657007F521C /* market */,
+				18E9AD9720B30CD8008126D0 /* addBook */,
 				188FF0C120908664007F521C /* store */,
 				188FF0C220908676007F521C /* message */,
 				188FF0C3209086B0007F521C /* mine */,
@@ -328,6 +333,15 @@
 			path = myGoods;
 			sourceTree = "<group>";
 		};
+		18E9AD9720B30CD8008126D0 /* addBook */ = {
+			isa = PBXGroup;
+			children = (
+				18E9AD9C20B30E22008126D0 /* addBookViewController.swift */,
+				18E9AD9D20B30E22008126D0 /* addBookViewController.xib */,
+			);
+			path = addBook;
+			sourceTree = "<group>";
+		};
 		A3B2DB5313BCB7EE8AB748B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E9AD9F20B30E22008126D0 /* addBookViewController.xib in Resources */,
 				188FF0EA20984BC4007F521C /* MarketTableViewCell.xib in Resources */,
 				18523ED220B1E5290090EC90 /* exchangeViewController.xib in Resources */,
 				18E42F8E20A77F3400AB9D48 /* RegisterViewController.xib in Resources */,
@@ -544,6 +559,7 @@
 				18820B5520B1C14A00038BFF /* trade.swift in Sources */,
 				188FF0D820923F52007F521C /* StoreViewController.swift in Sources */,
 				18E9AD9520B2F265008126D0 /* goodsTableViewCell.swift in Sources */,
+				18E9AD9E20B30E22008126D0 /* addBookViewController.swift in Sources */,
 				18ADA45A20AE109E00D261D4 /* SwiftNotice.swift in Sources */,
 				188FF0E920984BC4007F521C /* MarketTableViewCell.swift in Sources */,
 			);
