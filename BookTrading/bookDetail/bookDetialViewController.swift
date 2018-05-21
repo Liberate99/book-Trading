@@ -102,6 +102,7 @@ class bookDetialViewController: UIViewController {
         let EVW = exchangeViewController()
         //EVW.modalPresentationStyle = UIModalPresentationOverCurrentContext;
         EVW.userid = self.base.cacheGetString(key: "userid")
+        EVW.price = self.purchasingBookWithPro.bookPrice
         EVW.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.present(EVW, animated: true, completion: nil)
         
@@ -132,6 +133,8 @@ class bookDetialViewController: UIViewController {
                             self.upDateBalance(balance: Float(self.presentBalance), price: Float(self.purchasingBookWithPro.bookPrice), username: self.base.cacheGetString(key: "username"))
                             // 更新 book --status=1（状态） --puchaserid（购买者）
                             self.upDateStatus_PurchaserId(bookid: self.bookId, purchaserid: Int(self.base.cacheGetString(key: "userid"))!, status: 1)
+                            
+                            SwiftNotice.showText("购买成功！")
                         } else {
                             print("???????????????????")
                         }

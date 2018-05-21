@@ -21,6 +21,7 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 //    let data = ["bookname" : "1q84", "price" : 30] as [String : Any]
     
     var userid = ""
+    var price = 0
     
     // 数据源
     var bookArray = [model]()
@@ -30,9 +31,11 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 
     func getBookInfo(){
         
+        // 用户ID相等的情况下，使要交换书的价格小于等于想要书的价格
+        let parameter = ["promulgatorid" :  userid , "price" : price] as [String : Any]
+        print("=======================")
+        print(parameter)
         
-        let parameter = ["promulgatorid" :  userid]
-
         Alamofire.request("http://127.0.0.1:8080/book/selectBookByUserId?", method: .get, parameters: parameter, encoding: URLEncoding.default)
             .responseJSON {
                 (response) in
@@ -44,15 +47,17 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
                     let JSOnDictory = JSON(jsonresult)
                     //let JSONDictory = jsonresult.data
                     let data = JSOnDictory.array
-                    for dataDic in data!{
-                        let _model = model()
-                        _model.bookname = dataDic["bookname"].string ?? ""
-                        _model.price = dataDic["bookprice"].float ?? 0
-                        self.bookArray.append(_model)
-                        print(_model.bookname )
-                        print(_model.price)
+                    if data == [] {
+                        SwiftNotice.showText("没有合适的交换书籍！")
+                    }else {
+                        for dataDic in data!{
+                            let _model = model()
+                            _model.bookname = dataDic["bookname"].string ?? ""
+                            _model.price = dataDic["bookprice"].float ?? 0
+                            self.bookArray.append(_model)
+                        }
+                        self.picker.reloadComponent(0)
                     }
-                    self.picker.reloadComponent(0)
                 }
             }
     }
@@ -78,9 +83,21 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var ok: UIButton!
     
+    //
     @IBAction func getPickerViewValue(_ sender: Any) {
         print(picker.selectedRow(inComponent: 0))
+        if (bookArray.count == 0){
+            print("无")
+        } else {
+            print(bookArray[picker.selectedRow(inComponent: 0)].bookname)
+
+        }
+        self.dismiss(animated: true, completion: nil)
+
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,11 +109,7 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
         // delegate
         picker.delegate = self as? UIPickerViewDelegate
         
-        
-        
         SwiftNotice.showText("请选择用来交换的书籍")
-
-        
         
         self.view.backgroundColor = UIColor(red: 0 / 255.0, green: 0 / 255.0, blue: 0 / 255.0, alpha: 0.5)
         

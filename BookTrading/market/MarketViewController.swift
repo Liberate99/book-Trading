@@ -16,7 +16,8 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     // 数据源
     var bookWithPromulgatorDataArray = [bookWithPromulgator]()
-    
+    var refreshAction = UIRefreshControl.init()
+
     // tableView
     @IBOutlet weak var underTableView: UITableView!
     //    //设置单元格的大小
@@ -37,7 +38,8 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     /**
      *  加载数据
      */
-    func getBooks(){
+    @objc func getBooks(){
+        bookWithPromulgatorDataArray = []
         // 获取bookDataArray数据
         Alamofire.request("http://127.0.0.1:8080/book/selectAllBooksWithPromulgator", method: .get, parameters: nil, encoding: URLEncoding.default)
             .responseJSON {
@@ -51,6 +53,10 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                     //let JSONDictory = jsonresult.data
                     let data = JSOnDictory.array
                     for dataDic in data!{
+                        
+                        if dataDic["status"].int == 1 {
+                            continue
+                        }
                         let model = bookWithPromulgator()
                         //  ??  NIL合并运算符，它的作用是如果 A 不是NIL 就返回前面可选类型参数 A 的确定值， 如果 A 是NIL 就返回后面 B 的值
                         model.bookId = dataDic["bookid"].int ?? 0
@@ -69,6 +75,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                         self.bookWithPromulgatorDataArray.append(model)
                     }
                     self.underTableView.reloadData()
+                    self.refreshAction.endRefreshing()
                 }
         }
     }
@@ -82,7 +89,12 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.9)
         let dict:NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.light)]
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [NSAttributedStringKey : AnyObject]//NSAttributedStringKey
+        
+        refreshAction.attributedTitle = NSAttributedString.init(string: "正在下拉刷新")
+        refreshAction.addTarget(self, action: #selector(getBooks), for: .valueChanged )
+        underTableView.addSubview(refreshAction)
         underTableView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        
         
         getBooks()
         
