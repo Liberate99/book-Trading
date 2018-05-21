@@ -124,6 +124,11 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var ok: UIButton!
+    @IBOutlet weak var calcleButton: UIButton!
+    
+    @IBAction func cancleAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func getPickerViewValue(_ sender: Any) {
         print(picker.selectedRow(inComponent: 0))
@@ -142,7 +147,6 @@ class exchangeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
             exchangeAlert.addAction(cancelAction)
             exchangeAlert.addAction(okAction)
             self.present(exchangeAlert, animated: true, completion: nil)
-            
             
         }
         self.dismiss(animated: true, completion: nil)

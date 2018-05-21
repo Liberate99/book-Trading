@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="exchangeViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
+                <outlet property="calcleButton" destination="pyK-7D-1in" id="eRk-IC-W25"/>
                 <outlet property="ok" destination="xI0-9p-byZ" id="ybI-kA-K8G"/>
                 <outlet property="picker" destination="diH-ip-BPM" id="xzi-Px-Iwm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,6 +23,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-7D-1in">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <connections>
+                        <action selector="cancleAction:" destination="-1" eventType="touchUpInside" id="wWo-IE-oCu"/>
+                    </connections>
+                </button>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diH-ip-BPM">
                     <rect key="frame" x="28" y="370" width="320" height="180"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,6 +57,10 @@
                 <constraint firstItem="diH-ip-BPM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0ef-6z-5SQ"/>
                 <constraint firstItem="xI0-9p-byZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HjN-LY-suh"/>
                 <constraint firstItem="xI0-9p-byZ" firstAttribute="top" secondItem="diH-ip-BPM" secondAttribute="bottom" constant="34" id="KIJ-FI-hDg"/>
+                <constraint firstItem="pyK-7D-1in" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jWy-rc-34L"/>
+                <constraint firstItem="pyK-7D-1in" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="t8y-YW-Wqh"/>
+                <constraint firstItem="pyK-7D-1in" firstAttribute="centerX" secondItem="diH-ip-BPM" secondAttribute="centerX" id="w4u-HD-WIf"/>
+                <constraint firstItem="pyK-7D-1in" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xiZ-Fs-ZFr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xI0-9p-byZ" secondAttribute="bottom" constant="44" id="xvR-db-1aC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
