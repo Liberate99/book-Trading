@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 
 class MineViewController: UIViewController {
 
     var balanceNum = 100
+    
+    var User: user = user()
+    
+    var base: baseUserClass = baseUserClass()
     
     @IBOutlet var backGroundView: UIView!
     @IBOutlet weak var userUnderView: UIView!
@@ -28,19 +33,48 @@ class MineViewController: UIViewController {
         print("我的发布")
     }
     
+    // getUserInfo
+    func getUserInfo(username: String){
+        Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: ["username" : username], encoding: URLEncoding.default)
+            .validate()
+            .responseJSON{
+                (response) in
+                // 有错误就打印错误，没有就解析数据
+                if let Error = response.result.error{
+                    print(Error)
+                } else if let jsonresult = response.result.value {
+                    // 用 SwiftyJSON 解析数据
+                    let JSOnDictory = JSON(jsonresult)
+                    print(JSOnDictory)
+                    let data = JSOnDictory.array
+                    self.User.userId = data![0]["userid"].int ?? 0
+                    // 加载用户名
+                    self.User.userName = data![0]["username"].string ?? ""
+                    self.userName.text = self.User.userName
+                    // 加载用户余额
+                    self.User.balance = data![0]["balance"].float ?? 0
+                    self.balance.setTitle("      我的余额                                              \(self.User.balance)", for: .normal)
+                    self.User.userPic = data![0]["userpic"].string ?? ""
+                    // 加载用户图片
+                    let url = URL(string: self.User.userPic)
+                    let _data = NSData(contentsOf: url!)
+                    if _data != nil {
+                        self.userPic.image = UIImage(data: _data! as Data)
+                    } else {
+                        self.userPic.image = UIImage(named: "userPic")
+                        print("picture is nil! /n")
+                    }
+                }
+            }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(base.cacheGetString(key: "username"))
         
-        // 加载线上图片
-        let url = URL(string: "http://i3.sinaimg.cn/edu/2013/0411/U3835P42DT20130411102511.jpg")
-        let data = NSData(contentsOf: url!)
-        if data != nil {
-            userPic.image = UIImage(data: data as! Data)
-        } else {
-            userPic.image = UIImage(named: "userPic")
-            print("picture is nil! /n")
-        }
+        getUserInfo(username: self.base.cacheGetString(key: "username"))
+        
         
         // 头像圆角
         userPic.layer.cornerRadius = 35
@@ -55,7 +89,7 @@ class MineViewController: UIViewController {
         
         // liked
         balance.backgroundColor = UIColor.white
-        balance.setTitle("    我的余额        \(balanceNum)", for:.normal)
+        //balance.setTitle("    我的余额        \(balanceNum)", for:.normal)
             //?.text = "我的余额        \(balanceNum)"
         
         // setting
@@ -71,7 +105,4 @@ class MineViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
 }

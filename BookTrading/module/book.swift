@@ -9,14 +9,14 @@
 import UIKit
 
 class book: NSObject {
-    var bookId = 0
+    var bookId: Int = 0
     var bookName = ""
     var autherName = ""
     var picURL = ""
-    var promulgatorId = 0
-    var purchaserId = 0
-    var status = 0      // 0是未卖出； 1是已卖出，2是已交换
-    var bookPrice = 0
+    var promulgatorId: Int = 0
+    var purchaserId: Int = 0
+    var status: Int = 0      // 0是未卖出； 1是已卖出，2是已交换
+    var bookPrice: Float = 0
     var bookContent = ""
     var publishDate = ""
 }
