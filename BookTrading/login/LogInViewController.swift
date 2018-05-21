@@ -120,9 +120,6 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         //收起键盘
         UsernameTextField.resignFirstResponder()
         PasswordTextField.resignFirstResponder()
-//        //打印出文本框中的值
-//        print(UsernameTextField.text ?? "")
-//        print(PasswordTextField.text ?? "")
         return true
     }
     
