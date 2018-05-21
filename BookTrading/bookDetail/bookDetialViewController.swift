@@ -96,13 +96,11 @@ class bookDetialViewController: UIViewController {
     // 交换
     @IBAction func exchange(_ sender: Any) {
 
-        // TODO 查询适合交换的书（自己书的价格《= 要换书的价格》）
-        // TODO 选择自己用来交换的书
-        // TODO 实现交换
         let EVW = exchangeViewController()
         //EVW.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-        EVW.userid = self.base.cacheGetString(key: "userid")
-        EVW.price = self.purchasingBookWithPro.bookPrice
+        EVW.userid = Int(self.base.cacheGetString(key: "userid"))!
+        EVW.price = Float(self.purchasingBookWithPro.bookPrice)
+        EVW.bookid = self.bookId
         EVW.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.present(EVW, animated: true, completion: nil)
         
@@ -192,7 +190,7 @@ class bookDetialViewController: UIViewController {
     @IBAction func collect(_ sender: Any) {
         
         // 显示提示  http://www.hangge.com/blog/cache/detail_2033.html
-        SwiftNotice.showText("收藏！！！！")
+        SwiftNotice.showText("已收藏！")
         
         print("收藏\(bookId)")
     }

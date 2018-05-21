@@ -54,7 +54,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                     let data = JSOnDictory.array
                     for dataDic in data!{
                         
-                        if dataDic["status"].int == 1 {
+                        if dataDic["status"].int != 0 {
                             continue
                         }
                         let model = bookWithPromulgator()
@@ -69,7 +69,6 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
                         model.bookPrice = dataDic["bookprice"].int ?? 0
                         model.bookContent = dataDic["bookcontent"].string ?? ""
                         model.publishDate = dataDic["publishtime"].string ?? ""
-                        
                         model.userName = dataDic["username"].string ?? ""
                         model.userPic = dataDic["userpic"].string ?? ""
                         self.bookWithPromulgatorDataArray.append(model)
