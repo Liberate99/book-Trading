@@ -58,7 +58,6 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="375" id="1Z9-qF-uwR"/>
                         <constraint firstItem="TTk-7F-plP" firstAttribute="leading" secondItem="qfX-ss-X05" secondAttribute="trailing" constant="20" id="4db-7h-7xc"/>
                         <constraint firstItem="qfX-ss-X05" firstAttribute="leading" secondItem="hJg-sZ-sCt" secondAttribute="leading" constant="22" id="7H6-di-jQE"/>
                         <constraint firstItem="u86-zQ-aFW" firstAttribute="top" secondItem="hJg-sZ-sCt" secondAttribute="top" constant="21" id="WH8-wr-0Gm"/>
@@ -150,6 +149,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RH1-FM-ABc" secondAttribute="trailing" id="YfR-K0-H4f"/>
                 <constraint firstItem="RH1-FM-ABc" firstAttribute="top" secondItem="Tfd-vG-jcm" secondAttribute="bottom" constant="10" id="awb-4d-o2A"/>
                 <constraint firstItem="hJg-sZ-sCt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cDS-74-mBN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hJg-sZ-sCt" secondAttribute="trailing" id="kBs-v4-fqO"/>
                 <constraint firstItem="yux-pL-gYh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lz7-Lx-wo3"/>
                 <constraint firstItem="RH1-FM-ABc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nnX-6Q-m4W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yux-pL-gYh" secondAttribute="trailing" id="uVa-Hm-8zB"/>

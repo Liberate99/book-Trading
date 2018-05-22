@@ -82,8 +82,9 @@ class MineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(base.cacheGetString(key: "username"))
-        
+        print("!!!!!!!")
+        print(self.base.cacheGetString(key: "username"))
+        print("?????????????")
         getUserInfo(username: self.base.cacheGetString(key: "username"))
         
         
@@ -100,8 +101,6 @@ class MineViewController: UIViewController {
         
         // liked
         balance.backgroundColor = UIColor.white
-        //balance.setTitle("    我的余额        \(balanceNum)", for:.normal)
-            //?.text = "我的余额        \(balanceNum)"
         
         // setting
         setting.backgroundColor = UIColor.white

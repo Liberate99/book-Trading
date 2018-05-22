@@ -14,4 +14,5 @@ class user: NSObject {
     var passWord: String = ""
     var userPic: String = ""
     var balance: Float = 0
+    var collection: String = ""
 }

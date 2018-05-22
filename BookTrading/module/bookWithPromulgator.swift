@@ -25,4 +25,6 @@ class bookWithPromulgator: NSObject {
     var userName: String = "" // 发布者
     var passWord: String = ""
     var userPic: String = ""
+    var balance: Float = 0
+    var collection: String = ""
 }

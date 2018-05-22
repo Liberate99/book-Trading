@@ -87,7 +87,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                                 // 记录用户Id
                                 self.base.cacheSetString(key: "userid",   value: "\(data.array![0]["userid"])")
                                 // 纪录用户名
-                                self.base.cacheSetString(key: "userName", value: data.array![0]["username"].string!)
+                                self.base.cacheSetString(key: "username", value: data.array![0]["username"].string!)
                                 // 记录用户图片
                                 self.base.cacheSetString(key: "userPic",  value: data.array![0]["userpic"].string!)
 //                                // 记录用户余额

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Alamofire
 import SwiftyJSON
 
@@ -16,6 +17,9 @@ class bookDetialViewController: UIViewController {
     var bookId = 0
     
     var presentBalance = 0
+    
+    var collectionArray = [""]
+    
     
     var purchasingBookWithPro: bookWithPromulgator = bookWithPromulgator()
     
@@ -189,10 +193,58 @@ class bookDetialViewController: UIViewController {
     
     @IBAction func collect(_ sender: Any) {
         
-        // 显示提示  http://www.hangge.com/blog/cache/detail_2033.html
-        SwiftNotice.showText("已收藏！")
-        
-        print("收藏\(bookId)")
+        var flag: Bool = false
+        for x in collectionArray {
+            if self.bookId == Int(x) {
+                print("已收藏过")
+                flag = true
+                SwiftNotice.showText("收藏过了！")
+            }
+        }
+        if flag == false {
+            let _parameter = ["username": self.base.cacheGetString(key: "username"), "collection": self.bookId] as [String : Any]
+            Alamofire.request("http://127.0.0.1:8080/user/addCollection?", method: .post, parameters: _parameter, encoding: URLEncoding.default)
+                .validate()
+                .responseJSON {
+                    (response) in
+                    // 有错误就打印错误，没有就解析数据
+                    if let Error = response.result.error{
+                        print(Error)
+                    } else if let jsonresult = response.result.value {
+                        // 用 SwiftyJSON 解析数据
+                        let data = JSON(jsonresult)
+                        if data != [] {
+                            if data == 1 { print("更新成功！\(data)") }
+                            else { print("更新失败") }
+                        }
+                    }
+            }
+            // 显示提示  http://www.hangge.com/blog/cache/detail_2033.html
+            SwiftNotice.showText("收藏成功！")
+            print("收藏\(bookId)")
+        }
+    }
+    
+    func getCollection(){
+        let str: String = self.base.cacheGetString(key: "username")
+        let _parameter = ["username":str] as [String : Any]
+        Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: _parameter, encoding: URLEncoding.default)
+            .validate()
+            .responseJSON{
+                (response) in
+                // 有错误就打印错误，没有就解析数据
+                if let Error = response.result.error{
+                    print(Error)
+                } else if let jsonresult = response.result.value {
+                    // 用 SwiftyJSON 解析数据
+                    let data = JSON(jsonresult)
+                    if data != [] {
+                        let collectionStr:NSString = data[0]["collection"].string! as NSString
+                        self.collectionArray = collectionStr.components(separatedBy: ",")
+                        print(self.collectionArray)
+                    }
+                }
+        }
     }
     
     override func viewDidLoad() {
@@ -200,6 +252,8 @@ class bookDetialViewController: UIViewController {
         
         // 请求参数 并填充
         getBooks(bookid: bookId)
+        getCollection()
+        
         
         self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
         let item = UIBarButtonItem(title: "书市", style: .plain, target: self, action: nil)
