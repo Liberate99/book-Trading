@@ -18,6 +18,8 @@ class MineViewController: UIViewController {
     
     var base: baseUserClass = baseUserClass()
     
+    var collectionArray = [""]
+    
     @IBOutlet var backGroundView: UIView!
     @IBOutlet weak var userUnderView: UIView!
     @IBOutlet weak var userPic: UIImageView!
@@ -33,14 +35,18 @@ class MineViewController: UIViewController {
     }
     
     @IBAction func myCollectionDetail(_ sender: Any) {
-        
+        let MCV = myCollectionViewController()
+        MCV.collectionArray = self.collectionArray
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(MCV, animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
     
     // myGoods tapped
     @objc func myGoodsTapped(_ button:UIButton){
         print("我的发布")
+        getCollection()
         let MGV = myGoodsViewController()
-        
         self.navigationController?.pushViewController(MGV, animated: true)
     }
     
@@ -79,6 +85,30 @@ class MineViewController: UIViewController {
             }
     }
     
+    // getCollection
+    func getCollection(){
+        let str: String = self.base.cacheGetString(key: "username")
+        let _parameter = ["username":str] as [String : Any]
+        Alamofire.request("http://127.0.0.1:8080/user/selectUserByName?", method: .get, parameters: _parameter, encoding: URLEncoding.default)
+            .validate(statusCode: 200..<600)
+            .responseJSON{
+                (response) in
+                // 有错误就打印错误，没有就解析数据
+                if let Error = response.result.error{
+                    print(Error)
+                } else if let jsonresult = response.result.value {
+                    // 用 SwiftyJSON 解析数据
+                    let data = JSON(jsonresult)
+                    if data != [] {
+                        let collectionStr:NSString = data[0]["collection"].string! as NSString
+                        self.collectionArray = collectionStr.components(separatedBy: ",")
+                        self.collectionArray.removeFirst()
+                        print(self.collectionArray)
+                    }
+                }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -87,6 +117,7 @@ class MineViewController: UIViewController {
         print("?????????????")
         getUserInfo(username: self.base.cacheGetString(key: "username"))
         
+        getCollection()
         
         // 头像圆角
         userPic.layer.cornerRadius = 35
