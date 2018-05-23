@@ -40,30 +40,34 @@ class addBookViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         print(bookContent.text!)
         print(bookPicURL.text!)
         
-        let _parameter = [  "bookname"      : bookName.text!,
-                            "authername"    : bookAuther.text!,
-                            "promulgatorid" : self.base.cacheGetString(key: "userid"),
-                            "purchaserid"   : 0,
-                            "status"        : 0,
-                            "bookprice"     : bookPrice.text!,
-                            "bookcontent"   : bookContent.text!,
-                            "publishtime"   : getDay(),
-                            "picurl"        : bookPicURL.text!] as [String : Any]
-
-        Alamofire.request("http://127.0.0.1:8080/book/addBook?", method: .post, parameters: _parameter, encoding: URLEncoding.default)
-            .validate()
-            .responseJSON{
-                (response) in
-                // 有错误就打印错误，没有就解析数据
-                if let Error = response.result.error{
-                    print(Error)
-                    SwiftNotice.showText("发布成功")
-                    self.navigationController?.popViewController(animated: true)
-                } else {
-                    print("添加成功")
-                    SwiftNotice.showText("发布成功")
-                    self.navigationController?.popViewController(animated: true)
-                }
+        if (bookName.text == "")||(bookAuther.text! == "")||(bookPrice.text! == "") {
+            SwiftNotice.showText("请完善相关信息！")
+        } else {
+            let _parameter = [  "bookname"      : bookName.text!,
+                                "authername"    : bookAuther.text!,
+                                "promulgatorid" : self.base.cacheGetString(key: "userid"),
+                                "purchaserid"   : 0,
+                                "status"        : 0,
+                                "bookprice"     : bookPrice.text!,
+                                "bookcontent"   : bookContent.text!,
+                                "publishtime"   : getDay(),
+                                "picurl"        : bookPicURL.text!] as [String : Any]
+            
+            Alamofire.request("http://127.0.0.1:8080/book/addBook?", method: .post, parameters: _parameter, encoding: URLEncoding.default)
+                .validate()
+                .responseJSON{
+                    (response) in
+                    // 有错误就打印错误，没有就解析数据
+                    if let Error = response.result.error{
+                        print(Error)
+                        SwiftNotice.showText("发布成功")
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                        print("添加成功")
+                        SwiftNotice.showText("发布成功")
+                        self.navigationController?.popViewController(animated: true)
+                    }
+            }
         }
     }
     
