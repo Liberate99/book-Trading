@@ -259,6 +259,7 @@ class bookDetialViewController: UIViewController {
         let item = UIBarButtonItem(title: "书市", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        //self.navigationItem.title = "\(self.purchasingBookWithPro.bookName)"
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.tabBarController?.tabBar.isHidden = true
         

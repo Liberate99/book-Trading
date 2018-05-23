@@ -156,6 +156,7 @@ class MarketViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let BWP = bookDetialViewController()
         BWP.bookId = bookWithPromulgatorDataArray[indexPath.row].bookId
+        BWP.navigationItem.title = bookWithPromulgatorDataArray[indexPath.row].bookName
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(BWP, animated: true)
         self.hidesBottomBarWhenPushed = false

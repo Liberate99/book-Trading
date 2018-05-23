@@ -50,6 +50,8 @@
 		18ED98D620B4B0EC00FAC54E /* myCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED98D420B4B0EC00FAC54E /* myCollectionViewController.xib */; };
 		18ED98DB20B4B2E300FAC54E /* myCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED98D920B4B2E300FAC54E /* myCollectionTableViewCell.swift */; };
 		18ED98DC20B4B2E300FAC54E /* myCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED98DA20B4B2E300FAC54E /* myCollectionTableViewCell.xib */; };
+		18ED98E020B57F8800FAC54E /* searchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED98DE20B57F8800FAC54E /* searchTableViewCell.swift */; };
+		18ED98E120B57F8800FAC54E /* searchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED98DF20B57F8800FAC54E /* searchTableViewCell.xib */; };
 		C9D0BBEA0F50540F45D0DBBB /* Pods_BookTrading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8450298BE1D727FB8B720819 /* Pods_BookTrading.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		18ED98D420B4B0EC00FAC54E /* myCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myCollectionViewController.xib; sourceTree = "<group>"; };
 		18ED98D920B4B2E300FAC54E /* myCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		18ED98DA20B4B2E300FAC54E /* myCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		18ED98DE20B57F8800FAC54E /* searchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTableViewCell.swift; sourceTree = "<group>"; };
+		18ED98DF20B57F8800FAC54E /* searchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchTableViewCell.xib; sourceTree = "<group>"; };
 		8450298BE1D727FB8B720819 /* Pods_BookTrading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookTrading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B343C9E6BC2FB686F8E7E78C /* Pods-BookTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookTrading/Pods-BookTrading.release.xcconfig"; sourceTree = "<group>"; };
 		E53343041414983595AA5D02 /* Pods-BookTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookTrading/Pods-BookTrading.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 			children = (
 				188FF0D620923F52007F521C /* StoreViewController.swift */,
 				188FF0D720923F52007F521C /* StoreViewController.xib */,
+				18ED98DE20B57F8800FAC54E /* searchTableViewCell.swift */,
+				18ED98DF20B57F8800FAC54E /* searchTableViewCell.xib */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				188FF0E120923F8A007F521C /* MineViewController.xib in Resources */,
 				187A22E620833BAC00091047 /* LaunchScreen.storyboard in Resources */,
 				188FF0D920923F52007F521C /* StoreViewController.xib in Resources */,
+				18ED98E120B57F8800FAC54E /* searchTableViewCell.xib in Resources */,
 				18ED98DC20B4B2E300FAC54E /* myCollectionTableViewCell.xib in Resources */,
 				187A22E120833BAB00091047 /* Main.storyboard in Resources */,
 				18D270BC20A21B1200CA0092 /* Assets.xcassets in Resources */,
@@ -567,6 +574,7 @@
 				18E42F8D20A77F3400AB9D48 /* RegisterViewController.swift in Sources */,
 				188FF0DC20923F6A007F521C /* MessageViewController.swift in Sources */,
 				188FF0BF20908368007F521C /* TabBarViewController.swift in Sources */,
+				18ED98E020B57F8800FAC54E /* searchTableViewCell.swift in Sources */,
 				188FF0E020923F8A007F521C /* MineViewController.swift in Sources */,
 				188FF0E52094170A007F521C /* LogInViewController.swift in Sources */,
 				187A22DC20833BAB00091047 /* AppDelegate.swift in Sources */,

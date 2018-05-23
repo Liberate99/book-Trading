@@ -10,10 +10,15 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var register: UIButton!
     @IBOutlet weak var backToLoginButton: UIButton!
     
+    @IBAction func registerAction(_ sender: Any) {
+        print("注册")
+    }
+    
     @IBAction func backToLogin(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

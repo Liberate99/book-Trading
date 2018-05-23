@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
                 <outlet property="backToLoginButton" destination="unA-QV-oUf" id="eUF-yI-0cZ"/>
+                <outlet property="register" destination="6YW-qE-DHB" id="NeA-WA-mnD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -80,6 +81,9 @@
                     <state key="normal" title="注册">
                         <color key="titleColor" red="1" green="0.99379031138153684" blue="0.95215557757301905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="0qH-u7-KSW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unA-QV-oUf">
                     <rect key="frame" x="141" y="545" width="93" height="28"/>
