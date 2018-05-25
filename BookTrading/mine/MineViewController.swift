@@ -47,7 +47,9 @@ class MineViewController: UIViewController {
         print("我的发布")
         getCollection()
         let MGV = myGoodsViewController()
+        self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(MGV, animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
     
     // getUserInfo
