@@ -79,7 +79,7 @@ class StoreViewController: UIViewController,UIScrollViewDelegate,UISearchBarDele
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("search did click")
         searchBar.resignFirstResponder()
-        //getBooks(str: searchBar.text!)
+        getBooks(str: searchBar.text!)
         self.tableView.reloadData()
 
     }
@@ -117,6 +117,7 @@ class StoreViewController: UIViewController,UIScrollViewDelegate,UISearchBarDele
                     }
                     print(self.bookArray)
                 }
+                self.tableView.reloadData()
         }
     }
     

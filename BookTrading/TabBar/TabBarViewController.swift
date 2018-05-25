@@ -17,10 +17,16 @@ class TabBarViewController: UITabBarController {
     
     var _backView:UIView? = nil
     //var items:NSArray = []
-    let NameArr = ["书市","书库","消息","我的"]
-    let PicArr = ["书市黑","书库黑","消息黑","我的黑"]
-    let PicSelectArr = ["书市白","书库白","消息白","我的白"]
-    let VCArr = [MarketViewController(),StoreViewController(),MessageViewController(),MineViewController()]
+//    let NameArr = ["书市","书库","消息","我的"]
+//    let PicArr = ["书市黑","书库黑","消息黑","我的黑"]
+//    let PicSelectArr = ["书市白","书库白","消息白","我的白"]
+//    let VCArr = [MarketViewController(),StoreViewController(),MessageViewController(),MineViewController()]
+    
+    let NameArr = ["书市","书库","我的"]
+    let PicArr = ["书市黑","书库黑","我的黑"]
+    let PicSelectArr = ["书市白","书库白","我的白"]
+    let VCArr = [MarketViewController(),StoreViewController(),MineViewController()]
+    
     
     //初始化数组
     var NavVCArr:[NSObject] = [NSObject]()
@@ -63,13 +69,13 @@ class TabBarViewController: UITabBarController {
         StroeNav.tabBarItem.selectedImage = UIImage(named:"书库白")?.withRenderingMode(.alwaysOriginal)
         StroeNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
-        let  RecomVC  = MessageViewController()
-        RecomVC.title = "消息"
-        let RecomNav = UINavigationController(rootViewController:RecomVC)
-        RecomNav.tabBarItem.title = "消息"
-        RecomNav.tabBarItem.image = UIImage(named:"消息黑")
-        RecomNav.tabBarItem.selectedImage = UIImage(named:"消息白")?.withRenderingMode(.alwaysOriginal)
-        RecomNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
+//        let  RecomVC  = MessageViewController()
+//        RecomVC.title = "消息"
+//        let RecomNav = UINavigationController(rootViewController:RecomVC)
+//        RecomNav.tabBarItem.title = "消息"
+//        RecomNav.tabBarItem.image = UIImage(named:"消息黑")
+//        RecomNav.tabBarItem.selectedImage = UIImage(named:"消息白")?.withRenderingMode(.alwaysOriginal)
+//        RecomNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         let  MyVC  = MineViewController()
         MyVC.title = "我的"
@@ -80,7 +86,8 @@ class TabBarViewController: UITabBarController {
         MyNav.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
         // 添加工具栏
-        let items = [MarketNav,StroeNav,RecomNav,MyNav]
+//        let items = [MarketNav,StroeNav,RecomNav,MyNav]
+        let items = [MarketNav,StroeNav,MyNav]
         self.viewControllers = items
         
         //tabBar 底部工具栏背景颜色 (以下两个都行)
