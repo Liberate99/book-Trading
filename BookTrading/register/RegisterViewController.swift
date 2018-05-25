@@ -52,11 +52,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backToLoginButton: UIButton!
     
     @IBAction func registerAction(_ sender: Any) {
-        print("注册")
-        print(username.text)
-        print(password.text)
-        print(password2.text)
-        
         if (username.text! != ""){
             if (password.text! != ""){
                 if (password2.text! != ""){
