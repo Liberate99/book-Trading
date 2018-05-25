@@ -13,7 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="BookTrading" customModuleProvider="target">
             <connections>
                 <outlet property="backToLoginButton" destination="unA-QV-oUf" id="eUF-yI-0cZ"/>
+                <outlet property="password" destination="aHz-av-5uo" id="CEf-Wg-q8c"/>
+                <outlet property="password2" destination="k1S-y9-OjH" id="wvn-M6-64R"/>
                 <outlet property="register" destination="6YW-qE-DHB" id="NeA-WA-mnD"/>
+                <outlet property="username" destination="iAe-j7-m7b" id="cEN-KI-cx6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
