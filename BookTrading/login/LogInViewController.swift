@@ -101,8 +101,8 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                                 
                             }
                         } else {
-                            print("用户名或密码错误")
-                            SwiftNotice.showText("用户名或密码错误")
+                            print("该账号不存在")
+                            SwiftNotice.showText("该账号不存在")
                         }
                     }
                     
